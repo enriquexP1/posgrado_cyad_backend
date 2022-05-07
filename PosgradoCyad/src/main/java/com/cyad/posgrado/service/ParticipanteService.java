@@ -32,7 +32,7 @@ public class ParticipanteService implements IParticipanteService{
 			repositorio.save(participante);
 			return true;
 		}catch(Exception e){
-			logger.info("ERROR AL CREAR PARTICIPANTE");
+			logger.error("ERROR AL CREAR PARTICIPANTE " + e);
 			return false;
 		}
 	}
@@ -44,7 +44,7 @@ public class ParticipanteService implements IParticipanteService{
 			repositorio.save(participante);
 			return true;
 		}catch(Exception e){
-			logger.info("ERROR AL ACTUALIZAR PARTICIPANTE");
+			logger.error("ERROR AL ACTUALIZAR PARTICIPANTE "+ e );
 			return false;
 		}
 	}
@@ -57,7 +57,7 @@ public class ParticipanteService implements IParticipanteService{
 			repositorio.delete(participante);
 			return true;
 		}catch(Exception e){
-			logger.info("ERROR AL BORRAR PARTICIPANTE");
+			logger.error("ERROR AL BORRAR PARTICIPANTE " + e);
 			return false;
 		}
 	}
@@ -67,7 +67,7 @@ public class ParticipanteService implements IParticipanteService{
 		try {
 			return convertidor.convertirLista(repositorio.findAll());
 		}catch(Exception e){
-			logger.info("ERROR AL LISTAR PARTICIPANTES");
+			logger.error("ERROR AL LISTAR PARTICIPANTES " + e);
 			return null;
 		}
 	}
@@ -77,7 +77,7 @@ public class ParticipanteService implements IParticipanteService{
 		try {
 			return new MParticipante(repositorio.findById(id));
 		}catch(Exception e){
-			logger.info("ERROR AL LISTAR PARTICIPANTES");
+			logger.error("ERROR AL LISTAR PARTICIPANTES " + e);
 			return null;
 		}
 	}
