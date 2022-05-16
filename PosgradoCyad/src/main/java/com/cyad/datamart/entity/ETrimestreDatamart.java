@@ -27,7 +27,7 @@ public class ETrimestreDatamart implements Serializable {
 	@Column(name="TRIMESTRE")
 	private String trimestre;
 	
-	@Column(name="FECHA_INCIO")
+	@Column(name="FECHA_INICIO")
 	private Date fecha_inicio;
 	
 	@Column(name="FECHA_FIN")
