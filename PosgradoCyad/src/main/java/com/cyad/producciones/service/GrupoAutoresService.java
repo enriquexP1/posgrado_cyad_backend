@@ -54,10 +54,8 @@ public class GrupoAutoresService implements IGrupoAutoresService {
 	public boolean borrar(long id) {
 		try {	
 			EGrupoAutores autores = repositorio.findById(id);
+			repositorio.delete(autores);
 			logger.info("GRUPO DE AUTORES BORRADO");
-			autores.setActivo(false);
-			repositorio.save(autores);
-			//repositorio.delete(autores);
 			return true;
 		}catch(Exception e){
 			logger.info("ERROR AL BORRAR GRUPO DE AUTORES " + e);

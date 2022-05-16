@@ -5,11 +5,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -32,11 +36,13 @@ public class EGrupoProtocolo implements Serializable{
 	@Column(name="ACTIVO")
 	private boolean activo;
 	
-	@OneToMany(mappedBy = "grupo_proyecto")
+	@OneToMany(mappedBy = "grupo_proyecto", fetch = FetchType.EAGER)
+	@Fetch(value = FetchMode.SUBSELECT)
 	@JsonIgnore
 	private List<EProyecto> proyectos;
 	
-	@OneToMany(mappedBy = "grupo_participante")
+	@OneToMany(mappedBy = "grupo_participante", fetch = FetchType.EAGER)
+	@Fetch(value = FetchMode.SUBSELECT)
 	@JsonIgnore
 	private List<EParticipante> participantes;
 

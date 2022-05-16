@@ -24,7 +24,6 @@ public class MGrupoProtocolo {
 		this.activo = grupo.isActivo();
 		
 		if(grupo.getParticipantes() != null) {
-			System.out.print("si hay participantes");
 			this.participantes = new ArrayList<MParticipante>();
 			
 			for(EParticipante participante : grupo.getParticipantes()) {
