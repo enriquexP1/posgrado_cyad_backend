@@ -1,0 +1,3 @@
+mysql -u root -padmin -e "use db_cyad_posgrado; call cronos;"
+
+echo saliendo de MYSQL...
