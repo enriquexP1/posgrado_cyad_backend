@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorTipoClave;
 import com.cyad.producciones.entity.ETipoClave;
 import com.cyad.producciones.model.MTipoClave;
 import com.cyad.producciones.repository.ITipoClaveRepository;
-
+/**
+ * implementacion de la interface ITipoClaveService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_tipo_clave")
 public class TipoClaveService implements ITipoClaveService {
 	@Autowired

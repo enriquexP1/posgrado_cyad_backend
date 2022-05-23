@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorRol;
 import com.cyad.posgrado.entity.ERol;
 import com.cyad.posgrado.model.MRol;
 import com.cyad.posgrado.repository.RolRepository;
-
+/**
+ * implementacion de la interface IRolService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_rol")
 public class RolService implements IRolService{
 	@Autowired

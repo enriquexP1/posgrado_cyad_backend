@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorEstadoAcademico;
 import com.cyad.posgrado.entity.EEstadoAcademico;
 import com.cyad.posgrado.model.MEstadoAcademico;
 import com.cyad.posgrado.repository.EstadoAcademicoRepository;
-
+/**
+ * implementacion de la interface IEstadoAcademicoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_estado_academico")
 public class EstadoAcademicoService implements IEstadoAcademicoService{
 	

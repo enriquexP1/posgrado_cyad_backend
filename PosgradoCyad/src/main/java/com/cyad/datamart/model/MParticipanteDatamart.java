@@ -1,14 +1,21 @@
 package com.cyad.datamart.model;
 
 import com.cyad.datamart.entity.EParticipanteDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad EParticipanteDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MParticipanteDatamart {
 	private long id;
 	private String rol;
 	private String nombre;
 	private String ap_paterno;
 	private String ap_materno;
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad participante
+	 */
 	public MParticipanteDatamart(EParticipanteDatamart participante) {
 		super();
 		this.id = participante.getId();

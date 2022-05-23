@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorAutor;
 import com.cyad.producciones.entity.EAutor;
 import com.cyad.producciones.model.MAutor;
 import com.cyad.producciones.repository.IAutorRepository;
-
+/**
+ * implementacion de la interface IAutorService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_autor")
 public class AutorService implements IAutorService {
 

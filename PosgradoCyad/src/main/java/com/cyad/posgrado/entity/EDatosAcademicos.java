@@ -12,7 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa el conjunto de datos academicos de un alumno en el posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="DATOS_ACADEMICOS")
 @Entity
 public class EDatosAcademicos implements Serializable{

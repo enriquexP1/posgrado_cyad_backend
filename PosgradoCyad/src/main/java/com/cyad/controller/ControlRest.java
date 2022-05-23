@@ -113,9 +113,13 @@ import com.cyad.producciones.service.ProduccionService;
 import com.cyad.producciones.service.TipoAutorService;
 import com.cyad.producciones.service.TipoClaveService;
 import com.cyad.producciones.service.TipoProduccionService;
-
+/**
+ * Esta clase es el controlador principal REST almacena las rutas que se utilizan para atender las peticiones HTTP
+ * @author Salvador Solis Atenco
+ *
+ */
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")// permisos CORS a la ruta por defecto de la apliccion de Angular
 @RequestMapping("/v1")
 public class ControlRest {
 	@Autowired

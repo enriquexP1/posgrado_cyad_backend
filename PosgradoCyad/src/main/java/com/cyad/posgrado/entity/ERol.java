@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa a los roles que tiene un participante en un grupo de protocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_ROL")
 @Entity
 public class ERol implements Serializable{

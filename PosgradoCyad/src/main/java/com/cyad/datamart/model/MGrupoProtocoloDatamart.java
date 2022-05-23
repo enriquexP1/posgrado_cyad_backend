@@ -5,12 +5,19 @@ import java.util.List;
 
 import com.cyad.datamart.entity.EGrupoProtocoloDatamart;
 import com.cyad.datamart.entity.EParticipanteDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad EGrupoProtocoloDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MGrupoProtocoloDatamart {
 	private long id;
 	private MProyectoDatamart proyecto;
 	private List<MParticipanteDatamart> participantes;
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad grupo protocolo
+	 */
 	public MGrupoProtocoloDatamart(EGrupoProtocoloDatamart grupo) {
 		super();
 		this.id = grupo.getId();

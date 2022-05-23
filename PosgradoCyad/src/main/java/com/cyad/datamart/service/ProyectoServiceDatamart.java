@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.EProyectoDatamart;
 import com.cyad.datamart.model.MProyectoDatamart;
-
+/**
+ * implementacion de la interface IProyectoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_proyecto_service")
 public class ProyectoServiceDatamart implements IProyectoService {
 

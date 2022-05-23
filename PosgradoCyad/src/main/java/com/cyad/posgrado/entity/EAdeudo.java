@@ -9,7 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa los adeudos de documentacion de un alumno
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="ADEUDOS_INGRESO")
 @Entity
 public class EAdeudo implements Serializable{

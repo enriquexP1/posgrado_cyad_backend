@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.ETipoProyecto;
-
+/**
+ * clase que representa el objeto java de la entidad ETipoProyecto
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTipoProyecto {
 	private long id;
 	private String tipo;
@@ -10,7 +14,10 @@ public class MTipoProyecto {
 	public MTipoProyecto() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad tipo de proyecto
+	 */
 	public MTipoProyecto(ETipoProyecto proyecto) {
 		super();
 		this.id = proyecto.getId();

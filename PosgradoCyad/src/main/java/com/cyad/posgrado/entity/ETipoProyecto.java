@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa a los tipos de proyectos que desarrollan los alumnos del posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TIPO_PROYECTO")
 @Entity
 public class ETipoProyecto implements Serializable{

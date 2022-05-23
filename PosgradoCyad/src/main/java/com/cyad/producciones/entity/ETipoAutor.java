@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad que representa el catalogo de tipo de autor
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TIPO_AUTOR")
 @Entity
 public class ETipoAutor implements Serializable {

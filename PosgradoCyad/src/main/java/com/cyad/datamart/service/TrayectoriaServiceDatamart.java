@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.ETrayectoriaDatamart;
 import com.cyad.datamart.model.MTrayectoriaDatamart;
-
+/**
+ * implementacion de la interface ITrayectoriaService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_trayectoria_service")
 public class TrayectoriaServiceDatamart implements ITrayectoriaService {
 

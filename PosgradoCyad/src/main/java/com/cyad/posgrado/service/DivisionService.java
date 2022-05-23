@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorDivision;
 import com.cyad.posgrado.entity.EDivision;
 import com.cyad.posgrado.model.MDivision;
 import com.cyad.posgrado.repository.DivisionRepository;
-
+/**
+ * implementacion de la interface IDivisionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_division")
 public class DivisionService implements IDivisionService{
 	@Autowired

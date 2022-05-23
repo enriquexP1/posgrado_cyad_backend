@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorDatosAcademicos;
 import com.cyad.posgrado.entity.EDatosAcademicos;
 import com.cyad.posgrado.model.MDatosAcademicos;
 import com.cyad.posgrado.repository.DatosAcademicosRepository;
-
+/**
+ * implementacion de la interface IDatosAcademicosService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_datos_academicos")
 public class DatosAcademicosService implements IDatosAcademicosService {
 	@Autowired

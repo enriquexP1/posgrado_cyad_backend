@@ -1,7 +1,11 @@
 package com.cyad.producciones.model;
 
 import com.cyad.producciones.entity.EOrdenAutor;
-
+/**
+ * clase que representa el objeto java de la entidad EOrdenAutor 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MOrdenAutor {
 	private long id;
 	private String orden;

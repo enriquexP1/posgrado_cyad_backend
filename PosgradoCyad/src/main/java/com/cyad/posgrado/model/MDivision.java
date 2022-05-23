@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.util.List;
 
 import com.cyad.posgrado.entity.EDivision;
-
+/**
+ * clase que representa el objeto java de la entidad EDivision
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDivision{
 	private long id;
 	private String division;
@@ -15,7 +19,10 @@ public class MDivision{
 		
 	}
 
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad division
+	 */
 	public MDivision(EDivision division) {
 		super();
 		this.id = division.getId();

@@ -1,7 +1,11 @@
 package com.cyad.producciones.model;
 
 import com.cyad.producciones.entity.EGrupoAutores;
-
+/**
+ * clase que representa el objeto java de la entidad EGrupoAutores 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MGrupoAutores {
 	private long id;
 	private boolean activo;

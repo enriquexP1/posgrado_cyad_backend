@@ -12,7 +12,11 @@ import com.cyad.aspirantes.converter.ConvertidorEstadoAspirante;
 import com.cyad.aspirantes.entity.EEstadoAspirante;
 import com.cyad.aspirantes.model.MEstadoAspirante;
 import com.cyad.aspirantes.repository.EstadoAspiranteRepository;
-
+/**
+ * esta clase implementa la interfaz IEstadoAspiranteService para crear el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_estado_aspirante")
 public class EstadoAspiranteService implements IEstadoAspiranteService{
 	@Autowired

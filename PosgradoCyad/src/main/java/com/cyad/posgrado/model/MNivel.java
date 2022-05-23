@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.ENivel;
-
+/**
+ * clase que representa el objeto java de la entidad ENivel
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MNivel {
 	private long id;
 	private String nivel;
@@ -10,7 +14,10 @@ public class MNivel {
 	public MNivel() {
 		super();
 	}
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad nivel
+	 */
 	public MNivel(ENivel nivel) {
 		super();
 		this.id = nivel.getId();

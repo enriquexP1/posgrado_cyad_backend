@@ -12,7 +12,11 @@ import com.cyad.aspirantes.converter.ConvertidorAdeudoAspirante;
 import com.cyad.aspirantes.entity.EAdeudoAspirante;
 import com.cyad.aspirantes.model.MAdeudoAspirante;
 import com.cyad.aspirantes.repository.AdeudoAspiranteRepository;
-
+/**
+ * esta clase implementa la interfaz IAdeudoAspiranteService para crear el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_adeudo_aspirante")
 public class AdeudoAspiranteService implements IAdeudoAspiranteService{
 	@Autowired

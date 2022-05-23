@@ -11,6 +11,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * Esta clase representa los adeudos de documentacion que puede presentar un aspirante al posgrado
+ * @author VANDERWONSEN
+ *
+ */
 @Table(name="ADEUDO_ASPIRANTE")
 @Entity
 public class EAdeudoAspirante implements Serializable  {

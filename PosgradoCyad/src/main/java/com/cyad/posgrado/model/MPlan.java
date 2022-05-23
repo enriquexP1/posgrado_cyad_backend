@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EPlan;
-
+/**
+ * clase que representa el objeto java de la entidad EPlan
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MPlan {
 	private long id;
 	private int clave;
@@ -15,6 +19,10 @@ public class MPlan {
 		super();
 	}
 
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad plan
+	 */
 	public MPlan(EPlan plan) {
 		super();
 		this.id = plan.getId();

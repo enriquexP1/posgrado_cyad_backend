@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EAdeudo;
-
+/**
+ * clase que representa el objeto java de la entidad EAdeudo
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAdeudo {
 	private long id;
 	private String documento;
@@ -12,7 +16,10 @@ public class MAdeudo {
 	public MAdeudo() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad adeudo
+	 */
 	public MAdeudo(EAdeudo adeudo) {
 		super();
 		this.id = adeudo.getId();

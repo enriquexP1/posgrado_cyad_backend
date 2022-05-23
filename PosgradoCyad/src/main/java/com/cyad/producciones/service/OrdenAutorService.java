@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorOrdenAutor;
 import com.cyad.producciones.entity.EOrdenAutor;
 import com.cyad.producciones.model.MOrdenAutor;
 import com.cyad.producciones.repository.IOrdenAutorRepository;
-
+/**
+ * implementacion de la interface IOrdenAutorService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_orden_autor")
 public class OrdenAutorService implements IOrdenAutorService {
 	

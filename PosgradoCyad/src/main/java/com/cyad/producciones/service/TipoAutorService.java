@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorTipoAutor;
 import com.cyad.producciones.entity.ETipoAutor;
 import com.cyad.producciones.model.MTipoAutor;
 import com.cyad.producciones.repository.ITipoAutorRepository;
-
+/**
+ * implementacion de la interface ITipoAutorService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_tipo_autor")
 public class TipoAutorService implements ITipoAutorService {
 

@@ -13,7 +13,11 @@ import com.cyad.posgrado.converter.ConvertidorCorreo;
 import com.cyad.posgrado.entity.ECorreo;
 import com.cyad.posgrado.model.MCorreo;
 import com.cyad.posgrado.repository.CorreoRepository;
-
+/**
+ * implementacion de la interface ICorreoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_correo")
 public class CorreoService implements ICorreoService{
 

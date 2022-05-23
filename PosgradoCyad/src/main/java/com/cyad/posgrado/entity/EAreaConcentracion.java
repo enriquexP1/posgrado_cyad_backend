@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa el catalogo de areas de concentracion
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_AREA_CONCENTRACION")
 @Entity
 public class EAreaConcentracion implements Serializable{

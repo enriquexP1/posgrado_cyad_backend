@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EProfesor;
-
+/**
+ * clase que representa el objeto java de la entidad EProfesor
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MProfesor {
 	private long id;
 	private long numero_economico;
@@ -19,7 +23,10 @@ public class MProfesor {
 		
 	}
 
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad profesor
+	 */
 	public MProfesor(EProfesor profesor) {
 		super();
 		this.id = profesor.getId();

@@ -11,7 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa el catalogo de planes de estudio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_PLAN")
 @Entity
 public class EPlan {

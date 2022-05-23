@@ -7,7 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * clase entidad que representa el orden de autor
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="ORDEN_AUTOR")
 @Entity
 public class EOrdenAutor implements Serializable {

@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa al catalogo de divisiones a los que pertenecen los participantes del posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_DIVISION")
 @Entity
 public class EDivision implements Serializable {

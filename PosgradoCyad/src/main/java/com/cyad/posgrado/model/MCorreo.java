@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.ECorreo;
-
+/**
+ * clase que representa el objeto java de la entidad ECorreo
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MCorreo {
 	private long id;
 	private String correo;
@@ -12,7 +16,10 @@ public class MCorreo {
 	public MCorreo() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad correo
+	 */
 	public MCorreo(ECorreo correo) {
 		super();
 		this.id = correo.getId();

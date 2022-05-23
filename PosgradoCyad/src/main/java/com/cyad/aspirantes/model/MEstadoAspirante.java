@@ -3,7 +3,11 @@ package com.cyad.aspirantes.model;
 import java.util.List;
 
 import com.cyad.aspirantes.entity.EEstadoAspirante;
-
+/**
+ * clase que reprenta el modelo de objeto de un estado de aspirante a posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MEstadoAspirante {
 	private long id;
 	private String estado;

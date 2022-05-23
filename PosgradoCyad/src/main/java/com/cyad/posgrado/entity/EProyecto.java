@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa a los proyectos creados por alumnos en los posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="PROYECTO")
 @Entity
 public class EProyecto implements Serializable{

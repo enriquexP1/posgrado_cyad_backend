@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa a los participantes de un grupo de protocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="PARTICIPANTES")
 @Entity
 public class EParticipante implements Serializable{

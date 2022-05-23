@@ -14,7 +14,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad que representa a un autor
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="AUTOR")
 @Entity
 public class EAutor implements Serializable{

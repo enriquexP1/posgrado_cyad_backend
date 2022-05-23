@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad que representa el tipo de produccion
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TIPO_PRODUCCION")
 @Entity
 public class ETipoProduccion implements Serializable{

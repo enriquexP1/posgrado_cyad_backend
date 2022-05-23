@@ -9,7 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
+/**
+ * clase que representa a un alumno del posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_ALUMNO")
 @Entity
 public class EAlumnoDatamart implements Serializable{

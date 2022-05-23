@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EAreaConcentracion;
-
+/**
+ * clase que representa el objeto java de la entidad EAreaConcentracion
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAreaConcentracion {
 	private long id;
 	private String area;
@@ -12,6 +16,10 @@ public class MAreaConcentracion {
 		super();
 	}
 
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad area de concentracion
+	 */
 	public MAreaConcentracion(EAreaConcentracion area) {
 		super();
 		this.id = area.getId();

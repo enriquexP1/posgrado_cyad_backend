@@ -8,7 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa a los periodos trimestrales
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TRIMESTRES")
 @Entity
 public class ETrimestre {

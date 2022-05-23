@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorInstituciones;
 import com.cyad.posgrado.entity.EInstitucion;
 import com.cyad.posgrado.model.MInstitucion;
 import com.cyad.posgrado.repository.InstitucionRepository;
-
+/**
+ * implementacion de la interface IInstitucionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_institucion")
 public class InstitucionService implements IInstitucionService {
 	

@@ -7,11 +7,18 @@ import com.cyad.datamart.entity.EDatosPorTrimestreDatamart;
 import com.cyad.datamart.entity.ETrayectoriaDatamart;
 
 
-
+/**
+ * clase que representa el objeto java de la entidad ETrayectoriaDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTrayectoriaDatamart {
 	private long id;
 	private List<MDatosPorTrimestreDatamart> datos;
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad trimestre
+	 */
 	public MTrayectoriaDatamart(ETrayectoriaDatamart trayectoria) {
 		super();
 		this.id = trayectoria.getId();

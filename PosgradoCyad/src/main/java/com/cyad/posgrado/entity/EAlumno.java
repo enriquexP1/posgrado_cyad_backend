@@ -17,7 +17,11 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa a los alumnos de los posgrados
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="ALUMNO")
 @Entity
 public class EAlumno implements Serializable {

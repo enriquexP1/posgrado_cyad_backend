@@ -1,5 +1,9 @@
 package com.cyad.posgrado.entity;
-
+/**
+ * clase entidad representa el nivel de estudios de un alumno
+ * @author Salvador Solis Atenco
+ *
+ */
 import java.io.Serializable;
 import java.util.List;
 

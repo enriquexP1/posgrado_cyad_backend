@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa los estados academicos de los alumnos en el posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_ESTADO_ACADEMICO")
 @Entity
 public class EEstadoAcademico implements Serializable{

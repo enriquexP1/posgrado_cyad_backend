@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.EGrupoProtocoloDatamart;
 import com.cyad.datamart.model.MGrupoProtocoloDatamart;
-
+/**
+ * implementacion de la interface IGrupoProtocoloService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_grupo_service")
 public class GrupoProtocoloServiceDatamart implements IGrupoProtocoloService{
 

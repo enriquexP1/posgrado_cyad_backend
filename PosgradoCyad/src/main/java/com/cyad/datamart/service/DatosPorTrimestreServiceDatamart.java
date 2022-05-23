@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.EDatosPorTrimestreDatamart;
 import com.cyad.datamart.model.MDatosPorTrimestreDatamart;
-
+/**
+ * implementacion de la interface IDatosPorTrimestreService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_datos_service")
 public class DatosPorTrimestreServiceDatamart implements IDatosPorTrimestreService{
 

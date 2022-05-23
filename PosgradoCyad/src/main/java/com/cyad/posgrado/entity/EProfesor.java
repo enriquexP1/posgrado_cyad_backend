@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa a los los profesores de los posgrados
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="profesor")
 @Entity
 public class EProfesor implements Serializable{

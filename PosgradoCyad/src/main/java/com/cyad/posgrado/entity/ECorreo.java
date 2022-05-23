@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa el o los correos de un alumno
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CORREO")
 @Entity
 public class ECorreo implements Serializable{

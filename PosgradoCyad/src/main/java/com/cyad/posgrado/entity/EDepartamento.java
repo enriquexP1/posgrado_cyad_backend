@@ -13,7 +13,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+/**
+ * clase entidad representa el catalogo de departamentos a los que pertenecen los profesores
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_DEPARTAMENTO")
 @Entity
 @JsonIgnoreProperties(allowSetters = true, value = {"profesores"})

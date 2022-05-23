@@ -10,7 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa el catalogo de areas de investigacion en los posgrados
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_AREA_INVESTIGACION")
 @Entity
 public class EAreaInvestigacion implements Serializable {

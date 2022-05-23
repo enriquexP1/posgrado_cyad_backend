@@ -12,7 +12,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase que representa a un grupo de protocolo de un proyecto
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_GRUPO_PROTOCOLO")
 @Entity
 public class EGrupoProtocoloDatamart implements Serializable {

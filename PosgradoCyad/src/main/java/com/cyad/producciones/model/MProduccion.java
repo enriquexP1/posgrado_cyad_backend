@@ -5,7 +5,11 @@ import java.util.List;
 
 import com.cyad.producciones.entity.EGrupoAutores;
 import com.cyad.producciones.entity.EProduccion;
-
+/**
+ * clase que representa el objeto java de la entidad EProduccion 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MProduccion {
 	private long id;
 	private String clave_producto;

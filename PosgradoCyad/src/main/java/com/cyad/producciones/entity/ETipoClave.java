@@ -11,7 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad que representa el tipo de clave de autor
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TIPO_CLAVE")
 @Entity
 public class ETipoClave implements Serializable {

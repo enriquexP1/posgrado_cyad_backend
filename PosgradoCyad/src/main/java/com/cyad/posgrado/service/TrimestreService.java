@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorTrimestre;
 import com.cyad.posgrado.entity.ETrimestre;
 import com.cyad.posgrado.model.MTrimestre;
 import com.cyad.posgrado.repository.TrimestreRepository;
-
+/**
+ * implementacion de la interface ITrimestreService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_trimestres")
 public class TrimestreService implements ITrimestreService {
 

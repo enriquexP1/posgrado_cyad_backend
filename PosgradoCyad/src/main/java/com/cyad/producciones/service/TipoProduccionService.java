@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorTipoProduccion;
 import com.cyad.producciones.entity.ETipoProduccion;
 import com.cyad.producciones.model.MTipoProduccion;
 import com.cyad.producciones.repository.ITipoProduccionRepository;
-
+/**
+ * implementacion de la interface ITipoProduccionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_tipo_produccion")
 public class TipoProduccionService implements ITipoProduccionService {
 

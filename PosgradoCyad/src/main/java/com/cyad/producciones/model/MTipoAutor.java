@@ -1,7 +1,11 @@
 package com.cyad.producciones.model;
 
 import com.cyad.producciones.entity.ETipoAutor;
-
+/**
+ * clase que representa el objeto java de la entidad ETipoAutor 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTipoAutor {
 	private long id;
 	private String tipo_autor;

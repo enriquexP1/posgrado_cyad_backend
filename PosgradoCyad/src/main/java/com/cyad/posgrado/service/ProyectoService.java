@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorProyecto;
 import com.cyad.posgrado.entity.EProyecto;
 import com.cyad.posgrado.model.MProyecto;
 import com.cyad.posgrado.repository.ProyectoRepository;
-
+/**
+ * implementacion de la interface IProyectoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_proyecto")
 public class ProyectoService implements IProyectoService{
 	@Autowired

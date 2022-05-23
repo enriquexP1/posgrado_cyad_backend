@@ -3,7 +3,11 @@ package com.cyad.datamart.model;
 import java.sql.Date;
 
 import com.cyad.datamart.entity.EAlumnoDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad EAlumnoDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAlumnoDatamart {
 	private long id;
 	private String nombre;
@@ -22,7 +26,10 @@ public class MAlumnoDatamart {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad alumno
+	 */
 	public MAlumnoDatamart(EAlumnoDatamart alumno) {
 		super();
 		this.id = alumno.getId();

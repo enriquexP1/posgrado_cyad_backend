@@ -16,13 +16,16 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
+/**
+ * Esta clase configura la conexion con la base de datos de producciones
+ * @author Salvador Solis Atenco
+ *
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "produccionesEntityManagerFactory", transactionManagerRef = "produccionesTransactionManager", basePackages = { "com.cyad.producciones.repository"})
 public class ProduccionesBDConfig {
 	
-/**Esta clase configura los beans para manejar una de las bases de datos*/
 	
 	@Autowired
 	private Environment env;

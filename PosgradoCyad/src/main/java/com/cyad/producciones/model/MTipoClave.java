@@ -1,7 +1,11 @@
 package com.cyad.producciones.model;
 
 import com.cyad.producciones.entity.ETipoClave;
-
+/**
+ * clase que representa el objeto java de la entidad ETipoClave 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTipoClave {
 	private long id;
 	private String tipo;

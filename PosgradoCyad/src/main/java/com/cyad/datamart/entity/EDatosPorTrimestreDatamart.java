@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase que representa los datos academicos de un alumno durante el trimestre actual
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_DATOS_POR_TRIMESTRE")
 @Entity
 public class EDatosPorTrimestreDatamart implements Serializable {

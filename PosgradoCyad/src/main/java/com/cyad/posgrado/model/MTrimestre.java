@@ -3,13 +3,20 @@ package com.cyad.posgrado.model;
 import java.sql.Date;
 
 import com.cyad.posgrado.entity.ETrimestre;
-
+/**
+ * clase que representa el objeto java de la entidad ETrimestre
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTrimestre {
 	private long id;
 	private Date fecha_inicio;
 	private Date fecha_fin;
 	private String trimestre;
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad trimestre
+	 */
 	public MTrimestre(ETrimestre trimestre) {
 		super();
 		this.id = trimestre.getId();

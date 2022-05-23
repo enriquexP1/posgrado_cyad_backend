@@ -5,7 +5,11 @@ import java.util.List;
 
 import com.cyad.posgrado.entity.EAdeudo;
 import com.cyad.posgrado.entity.EDatosIngreso;
-
+/**
+ * clase que representa el objeto java de la entidad EDatosIngreso
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDatosIngreso {
 	private long id;
 	private String escuelaProcedencia;
@@ -17,7 +21,10 @@ public class MDatosIngreso {
 	public MDatosIngreso() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad datos de ingreso
+	 */
 	public MDatosIngreso(EDatosIngreso datos) {
 		super();
 		this.id = datos.getId();

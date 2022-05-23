@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EParticipante;
-
+/**
+ * clase que representa el objeto java de la entidad EParticipante
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MParticipante {
 	private long id;
 	private MProfesor profesor;
@@ -12,7 +16,10 @@ public class MParticipante {
 	public MParticipante() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad participante
+	 */
 	public MParticipante(EParticipante participante) {
 		super();
 		this.id = participante.getId();

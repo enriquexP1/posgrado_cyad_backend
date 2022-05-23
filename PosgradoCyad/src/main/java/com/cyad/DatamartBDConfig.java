@@ -16,7 +16,11 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
+/**
+ * Esta clase configura la conexion con la base de datos del datamart
+ * @author Salvador Solis Atenco
+ *
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "datamartEntityManagerFactory", transactionManagerRef = "datamartTransactionManager", basePackages = { "com.cyad.datamart.repository"})

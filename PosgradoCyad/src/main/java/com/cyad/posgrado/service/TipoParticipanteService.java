@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorTipoParticipante;
 import com.cyad.posgrado.entity.ETipoParticipante;
 import com.cyad.posgrado.model.MTipoParticipante;
 import com.cyad.posgrado.repository.TipoParticipantesRepository;
-
+/**
+ * implementacion de la interface ITipoParticipanteService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_tipo_participante")
 public class TipoParticipanteService implements ITipoParticipanteService {
 	@Autowired

@@ -1,14 +1,21 @@
 package com.cyad.datamart.model;
 
 import com.cyad.datamart.entity.EDatosPorTrimestreDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad EDatosPorTrimestreDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDatosPorTrimestreDatamart {
 	private long id;
 	private String estado;
 	private Float promedio;
 	private int creditos;
 	private MTrimestreDatamart trimestre;
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad datos por trimestre
+	 */
 	public MDatosPorTrimestreDatamart(EDatosPorTrimestreDatamart datos) {
 		super();
 		this.id = datos.getId();

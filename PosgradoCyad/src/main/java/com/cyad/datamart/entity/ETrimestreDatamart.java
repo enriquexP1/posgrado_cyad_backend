@@ -11,7 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase que representa los periodos trimestretrales
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TRIMESTRES")
 @Entity
 public class ETrimestreDatamart implements Serializable {

@@ -19,7 +19,11 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad que representa a una produccion
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="PRODUCCION")
 @Entity
 public class EProduccion implements Serializable{

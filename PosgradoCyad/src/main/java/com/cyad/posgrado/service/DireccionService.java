@@ -13,7 +13,11 @@ import com.cyad.posgrado.entity.EAlumno;
 import com.cyad.posgrado.entity.EDireccion;
 import com.cyad.posgrado.model.MDireccion;
 import com.cyad.posgrado.repository.DireccionRepository;
-
+/**
+ * implementacion de la interface IDireccionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_direccion")
 public class DireccionService implements IDireccionService{
 	@Autowired

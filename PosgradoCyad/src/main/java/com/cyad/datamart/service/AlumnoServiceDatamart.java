@@ -11,7 +11,11 @@ import com.cyad.datamart.converter.ConvertidorAlumnoDatamart;
 import com.cyad.datamart.entity.EAlumnoDatamart;
 import com.cyad.datamart.model.MAlumnoDatamart;
 import com.cyad.datamart.repository.IAlumnoRepositoryDatamart;
-
+/**
+ * implementacion de la interface IAlumnoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_alumno_service")
 public class AlumnoServiceDatamart implements IAlumnoService{
 	

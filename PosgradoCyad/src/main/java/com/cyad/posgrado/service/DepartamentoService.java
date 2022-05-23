@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorDepartamento;
 import com.cyad.posgrado.entity.EDepartamento;
 import com.cyad.posgrado.model.MDepartamento;
 import com.cyad.posgrado.repository.DepartamentoRepository;
-
+/**
+ * implementacion de la interface IDepartamentoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_departamento")
 public class DepartamentoService implements IDepartamentoService{
 	@Autowired

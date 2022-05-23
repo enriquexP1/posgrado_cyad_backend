@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.EParticipanteDatamart;
 import com.cyad.datamart.model.MParticipanteDatamart;
-
+/**
+ * implementacion de la interface IParticipanteService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_pariticipantes_service")
 public class ParticipanteServiceDatamart implements IParticipanteService{
 

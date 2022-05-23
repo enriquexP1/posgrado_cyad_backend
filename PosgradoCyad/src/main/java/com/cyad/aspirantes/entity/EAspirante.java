@@ -3,6 +3,11 @@ package com.cyad.aspirantes.entity;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * Esta clase representa a un aspirante a posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

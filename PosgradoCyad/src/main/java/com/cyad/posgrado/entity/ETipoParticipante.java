@@ -12,7 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa a los tipos de participantes en los grupos de protocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="CAT_TIPO_PARTICIPANTE")
 @Entity
 public class ETipoParticipante implements Serializable{

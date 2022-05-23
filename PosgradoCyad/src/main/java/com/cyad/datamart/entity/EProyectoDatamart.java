@@ -9,7 +9,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase que representa el proyecto que desarrolla un alumno durante su instancia en el posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_PROYECTO")
 @Entity
 public class EProyectoDatamart implements Serializable {

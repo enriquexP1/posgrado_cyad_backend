@@ -3,13 +3,20 @@ package com.cyad.datamart.model;
 import java.sql.Date;
 
 import com.cyad.datamart.entity.ETrimestreDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad ETrimestreDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTrimestreDatamart {
 	private long id;
 	private String trimestre;
 	private Date fecha_inicio;
 	private Date fecha_fin;
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad trimestre
+	 */
 	public MTrimestreDatamart(ETrimestreDatamart trimestre) {
 		super();
 		this.id = trimestre.getId();

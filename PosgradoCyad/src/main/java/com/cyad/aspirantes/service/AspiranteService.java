@@ -12,7 +12,11 @@ import com.cyad.aspirantes.converter.ConvertidorAspirante;
 import com.cyad.aspirantes.entity.EAspirante;
 import com.cyad.aspirantes.model.MAspirante;
 import com.cyad.aspirantes.repository.AspiranteRepository;
-
+/**
+ * esta clase implementa la interfaz IAspiranteService para crear el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_aspirante")
 public class AspiranteService implements IAspiranteService{
 	@Autowired

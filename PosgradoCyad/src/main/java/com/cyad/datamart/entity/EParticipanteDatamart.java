@@ -8,7 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase que representa a un participante de un grupo de protocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_PARTICIPANTE")
 @Entity
 public class EParticipanteDatamart implements Serializable {

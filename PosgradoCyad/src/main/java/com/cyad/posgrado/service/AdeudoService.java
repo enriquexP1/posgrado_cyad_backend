@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorAdeudo;
 import com.cyad.posgrado.entity.EAdeudo;
 import com.cyad.posgrado.model.MAdeudo;
 import com.cyad.posgrado.repository.AdeudoRepository;
-
+/**
+ * implementacion de la interface IAdeudoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_adeudos")
 public class AdeudoService implements IAdeudoService {
 	@Autowired

@@ -1,12 +1,19 @@
 package com.cyad.datamart.model;
 
 import com.cyad.datamart.entity.EProyectoDatamart;
-
+/**
+ * clase que representa el objeto java de la entidad EProyectoDatamart
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MProyectoDatamart {
 	private long id;
 	private String titulo;
 	private MGrupoProtocoloDatamart grupo;
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad proyecto
+	 */
 	public MProyectoDatamart() {
 		super();
 		// TODO Auto-generated constructor stub

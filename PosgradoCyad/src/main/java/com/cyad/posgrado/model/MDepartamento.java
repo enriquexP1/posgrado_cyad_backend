@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.util.List;
 
 import com.cyad.posgrado.entity.EDepartamento;
-
+/**
+ * clase que representa el objeto java de la entidad EDepartamento
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDepartamento {
 
 	private long id;
@@ -14,7 +18,10 @@ public class MDepartamento {
 	public MDepartamento() {
 		
 	}
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad departamento
+	 */
 	public MDepartamento(EDepartamento departamento) {
 		super();
 		this.id = departamento.getId();

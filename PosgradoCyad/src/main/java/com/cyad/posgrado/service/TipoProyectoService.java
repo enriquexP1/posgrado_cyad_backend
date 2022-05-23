@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorTipoProyecto;
 import com.cyad.posgrado.entity.ETipoProyecto;
 import com.cyad.posgrado.model.MTipoProyecto;
 import com.cyad.posgrado.repository.TipoProyectoRepository;
-
+/**
+ * implementacion de la interface ITipoProyectoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_tipo_proyecto")
 public class TipoProyectoService implements ITipoProyectoService{
 	

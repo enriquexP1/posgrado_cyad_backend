@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorAlumno;
 import com.cyad.posgrado.entity.EAlumno;
 import com.cyad.posgrado.model.MAlumno;
 import com.cyad.posgrado.repository.AlumnoRepository;
-
+/**
+ * implementacion de la interface IAlumnoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_alumno")
 public class AlumnoService implements IAlumnoService{
 	@Autowired

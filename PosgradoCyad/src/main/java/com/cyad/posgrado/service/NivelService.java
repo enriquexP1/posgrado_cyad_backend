@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorNivel;
 import com.cyad.posgrado.entity.ENivel;
 import com.cyad.posgrado.model.MNivel;
 import com.cyad.posgrado.repository.NivelRepository;
-
+/**
+ * implementacion de la interface INivelService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_nivel")
 public class NivelService implements INivelService {
 	

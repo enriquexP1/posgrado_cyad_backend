@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.cyad.datamart.entity.ETrimestreDatamart;
 import com.cyad.datamart.model.MTrimestreDatamart;
-
+/**
+ * implementacion de la interface ITrimestreService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("data_trimestre_service")
 public class TrimestreServiceDatamart implements ITrimestreService{
 

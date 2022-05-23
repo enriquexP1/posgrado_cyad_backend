@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EEstadoAcademico;
-
+/**
+ * clase que representa el objeto java de la entidad EEstadoAcademico
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MEstadoAcademico {
 	private long id;
 	private String estado;
@@ -11,7 +15,10 @@ public class MEstadoAcademico {
 	public MEstadoAcademico() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad estado academico
+	 */
 	public MEstadoAcademico(EEstadoAcademico estadoAcademico) {
 		this.id = estadoAcademico.getId();
 		this.estado = estadoAcademico.getEstado();

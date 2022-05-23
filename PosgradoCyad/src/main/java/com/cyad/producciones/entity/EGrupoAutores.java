@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad que representa al grupo de autores
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="GRUPO_AUTORES")
 @Entity
 public class EGrupoAutores  implements Serializable{

@@ -15,7 +15,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa los datos de ingreso de un alumno del posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="DATOS_INGRESO")
 @Entity
 public class EDatosIngreso implements Serializable{

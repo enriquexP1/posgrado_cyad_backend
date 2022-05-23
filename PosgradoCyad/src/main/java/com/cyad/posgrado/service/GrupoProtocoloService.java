@@ -13,7 +13,11 @@ import com.cyad.posgrado.converter.ConvertidorGrupoProtocolo;
 import com.cyad.posgrado.entity.EGrupoProtocolo;
 import com.cyad.posgrado.model.MGrupoProtocolo;
 import com.cyad.posgrado.repository.GrupoProtocoloRepository;
-
+/**
+ * implementacion de la interface IGrupoProtocoloService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_grupo_protocolo")
 public class GrupoProtocoloService implements IGrupoProtocoloService{
 	

@@ -5,7 +5,11 @@ import java.util.List;
 
 import com.cyad.aspirantes.entity.EAdeudoAspirante;
 import com.cyad.aspirantes.entity.EAspirante;
-
+/**
+ * clase que reprenta el modelo de objeto de un aspirante a posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAspirante {
 	private long id;
 	private String curp;

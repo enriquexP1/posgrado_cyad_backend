@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorPlan;
 import com.cyad.posgrado.entity.EPlan;
 import com.cyad.posgrado.model.MPlan;
 import com.cyad.posgrado.repository.PlanRepository;
-
+/**
+ * implementacion de la interface IPlanService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_plan")
 public class PlanService implements IPlanService{
 	

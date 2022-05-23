@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.util.List;
 
 import com.cyad.posgrado.entity.EAreaInvestigacion;
-
+/**
+ * clase que representa el objeto java de la entidad EAreaInvestigacion
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAreaInvestigacion {
 	private long id;
 	private String area_investigacion;
@@ -13,7 +17,10 @@ public class MAreaInvestigacion {
 	public MAreaInvestigacion() {
 		
 	}
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad area de investigacion
+	 */
 	public MAreaInvestigacion(EAreaInvestigacion area_investigacion) {
 		super();
 		this.id = area_investigacion.getId();

@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorDatosIngreso;
 import com.cyad.posgrado.entity.EDatosIngreso;
 import com.cyad.posgrado.model.MDatosIngreso;
 import com.cyad.posgrado.repository.DatosIngresoRepository;
-
+/**
+ * implementacion de la interface IDatosIngresoService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_datos_ingreso")
 public class DatosIngresoService implements IDatosIngresoService {
 	@Autowired

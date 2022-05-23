@@ -16,7 +16,11 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase entidad representa a los grupos de protocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="GRUPO_PROTOCOLO")
 @Entity
 public class EGrupoProtocolo implements Serializable{

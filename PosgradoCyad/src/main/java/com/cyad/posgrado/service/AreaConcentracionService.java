@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorAreaConcentracion;
 import com.cyad.posgrado.entity.EAreaConcentracion;
 import com.cyad.posgrado.model.MAreaConcentracion;
 import com.cyad.posgrado.repository.AreaConcentracionRepository;
-
+/**
+ * implementacion de la interface IAreaConcentracionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_area_concentracion")
 public class AreaConcentracionService implements IAreaConcentracionService{
 	@Autowired

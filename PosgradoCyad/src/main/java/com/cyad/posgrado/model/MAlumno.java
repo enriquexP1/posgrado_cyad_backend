@@ -6,7 +6,11 @@ import java.util.List;
 import com.cyad.posgrado.entity.EAlumno;
 import com.cyad.posgrado.entity.ECorreo;
 import com.cyad.posgrado.entity.EDireccion;
-
+/**
+ * clase que representa el objeto java de la entidad EAlumno
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAlumno {
 	private long id;
 	private long matricula;
@@ -31,7 +35,10 @@ public class MAlumno {
 	public MAlumno() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad alumno
+	 */
 	public MAlumno(EAlumno alumno) {
 		super();
 		this.id = alumno.getId();

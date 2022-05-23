@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.util.List;
 
 import com.cyad.posgrado.entity.EInstitucion;
-
+/**
+ * clase que representa el objeto java de la entidad EInstitucion
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MInstitucion {
 	private long id;
 	private String institucion;
@@ -13,7 +17,10 @@ public class MInstitucion {
 	public MInstitucion() {
 		
 	}
-	
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad institucion
+	 */
 	public MInstitucion(EInstitucion institucion) {
 		super();
 		this.id = institucion.getId();

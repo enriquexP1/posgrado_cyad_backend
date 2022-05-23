@@ -12,7 +12,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * clase que representa la trayectoria academica de un alumno
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="TB_TRAYECTORIA")
 @Entity
 public class ETrayectoriaDatamart implements Serializable{

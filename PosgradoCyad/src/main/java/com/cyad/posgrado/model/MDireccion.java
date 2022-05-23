@@ -1,7 +1,11 @@
 package com.cyad.posgrado.model;
 
 import com.cyad.posgrado.entity.EDireccion;
-
+/**
+ * clase que representa el objeto java de la entidad EDireccion
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDireccion {
 	
 	private long id;
@@ -25,7 +29,10 @@ public class MDireccion {
 	public MDireccion() {
 		
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad direccion
+	 */
 	public MDireccion(EDireccion direccion) {
 		super();
 		this.id = direccion.getId();

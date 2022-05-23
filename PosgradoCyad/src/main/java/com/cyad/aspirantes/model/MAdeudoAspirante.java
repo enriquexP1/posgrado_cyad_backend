@@ -1,7 +1,11 @@
 package com.cyad.aspirantes.model;
 
 import com.cyad.aspirantes.entity.EAdeudoAspirante;
-
+/**
+ * clase que reprenta el modelo de adeudo de documentaciopn de un aspirante a posgrado
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAdeudoAspirante {
 	private long id;
 	private boolean activo;

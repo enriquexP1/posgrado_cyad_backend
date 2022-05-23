@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorProfesor;
 import com.cyad.posgrado.entity.EProfesor;
 import com.cyad.posgrado.model.MProfesor;
 import com.cyad.posgrado.repository.ProfesorRepository;
-
+/**
+ * implementacion de la interface IProfesorService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_profesor")
 public class ProfesorService implements IProfesorService{
 	@Autowired

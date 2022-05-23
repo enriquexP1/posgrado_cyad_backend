@@ -21,7 +21,11 @@ import com.cyad.producciones.converter.ConvertidorProduccion;
 import com.cyad.producciones.entity.EProduccion;
 import com.cyad.producciones.model.MProduccion;
 import com.cyad.producciones.repository.IProduccionRepository;
-
+/**
+ * implementacion de la interface IProduccionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_produccion")
 public class ProduccionService implements IProduccionService {
 

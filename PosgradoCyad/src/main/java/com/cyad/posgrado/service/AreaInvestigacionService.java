@@ -12,7 +12,11 @@ import com.cyad.posgrado.converter.ConvertidorArea;
 import com.cyad.posgrado.entity.EAreaInvestigacion;
 import com.cyad.posgrado.model.MAreaInvestigacion;
 import com.cyad.posgrado.repository.AreaInvestigacionRepository;
-
+/**
+ * implementacion de la interface IAreaInvestigacionService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_area_investigacion")
 public class AreaInvestigacionService implements IAreaInvestigacionService{
 	@Autowired

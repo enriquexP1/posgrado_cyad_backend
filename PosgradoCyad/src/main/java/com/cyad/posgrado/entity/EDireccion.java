@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/**
+ * clase entidad representa la direccion(es) del alumno
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="DIRECCION")
 @Entity
 public class EDireccion implements Serializable{

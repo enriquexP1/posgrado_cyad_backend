@@ -12,7 +12,11 @@ import com.cyad.producciones.converter.ConvertidorGrupoAutores;
 import com.cyad.producciones.entity.EGrupoAutores;
 import com.cyad.producciones.model.MGrupoAutores;
 import com.cyad.producciones.repository.IGrupoAutoresRepository;
-
+/**
+ * implementacion de la interface IGrupoAutoresService para establecer el servicio
+ * @author Salvador Solis Atenco
+ *
+ */
 @Service("servicio_grupo_autores")
 public class GrupoAutoresService implements IGrupoAutoresService {
 

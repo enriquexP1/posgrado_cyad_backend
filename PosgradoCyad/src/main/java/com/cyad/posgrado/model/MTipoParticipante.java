@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.util.List;
 
 import com.cyad.posgrado.entity.ETipoParticipante;
-
+/**
+ * clase que representa el objeto java de la entidad ETipoParticipante
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTipoParticipante {
 	private long id;
 	private String tipo;
@@ -13,7 +17,10 @@ public class MTipoParticipante {
 	public MTipoParticipante() {
 		super();
 	}
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad tipo de participante
+	 */
 	public MTipoParticipante(ETipoParticipante tipo) {
 		super();
 		this.id = tipo.getId();

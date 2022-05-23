@@ -5,7 +5,11 @@ import java.util.List;
 
 import com.cyad.producciones.entity.EAutor;
 import com.cyad.producciones.entity.EGrupoAutores;
-
+/**
+ * clase que representa el objeto java de la entidad EAutor 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MAutor {
 	private long id;
 	private String clave;

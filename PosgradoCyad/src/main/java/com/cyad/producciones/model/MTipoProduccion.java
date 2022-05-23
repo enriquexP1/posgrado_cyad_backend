@@ -1,7 +1,11 @@
 package com.cyad.producciones.model;
 
 import com.cyad.producciones.entity.ETipoProduccion;
-
+/**
+ * clase que representa el objeto java de la entidad ETipoProduccion 
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MTipoProduccion {
 	private long id;
 	private String tipo;

@@ -5,7 +5,11 @@ import java.util.List;
 
 import com.cyad.posgrado.entity.EGrupoProtocolo;
 import com.cyad.posgrado.entity.EParticipante;
-
+/**
+ * clase que representa el objeto java de la entidad EGrupoProtocolo
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MGrupoProtocolo {
 	private long id;
 	private String clave;
@@ -16,7 +20,10 @@ public class MGrupoProtocolo {
 		super();
 	}
 		
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad grupo protocolo
+	 */
 	public MGrupoProtocolo(EGrupoProtocolo grupo) {
 		super();
 		this.id = grupo.getId();

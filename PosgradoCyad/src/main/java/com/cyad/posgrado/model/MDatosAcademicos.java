@@ -3,7 +3,11 @@ package com.cyad.posgrado.model;
 import java.sql.Date;
 
 import com.cyad.posgrado.entity.EDatosAcademicos;
-
+/**
+ * clase que representa el objeto java de la entidad EDatosAcademicos
+ * @author Salvador Solis Atenco
+ *
+ */
 public class MDatosAcademicos {
 	private long id;
 	private String dedicacion;
@@ -29,6 +33,7 @@ public class MDatosAcademicos {
 	private MAreaConcentracion areac;
 	private MEstadoAcademico estado;
 	
+
 	public MDatosAcademicos() {
 		super();
 		this.dedicacion = "";
@@ -54,7 +59,10 @@ public class MDatosAcademicos {
 	}
 	
 	
-
+	/**
+	 * constructor para la conversion de entidad a objeto
+	 * @param entidad datos academicos
+	 */
 	public MDatosAcademicos(EDatosAcademicos datos) {
 		super();
 		this.id = datos.getId();
