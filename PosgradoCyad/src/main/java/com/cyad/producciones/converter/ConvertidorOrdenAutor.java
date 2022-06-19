@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cyad.producciones.entity.EOrdenAutor;
 import com.cyad.producciones.model.MOrdenAutor;
 /**
- * Esta clase realiza una conversion de una entidad a un objeto
+ * Esta clase realiza una conversion de una entidad EOrdenAutor a un objeto MOrdenAutor
  * @author Salvador Solis Atenco
  *
  */

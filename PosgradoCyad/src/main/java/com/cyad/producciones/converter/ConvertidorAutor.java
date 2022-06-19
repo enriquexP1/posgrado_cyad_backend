@@ -7,7 +7,11 @@ import org.springframework.stereotype.Component;
 
 import com.cyad.producciones.entity.EAutor;
 import com.cyad.producciones.model.MAutor;
-
+/**
+ * Esta clase realiza una conversion de una entidad EAutor a un objeto MAutor
+ * @author Salvador Solis Atenco
+ *
+ */
 @Component("convertidor_autor")
 public class ConvertidorAutor {
 	/**

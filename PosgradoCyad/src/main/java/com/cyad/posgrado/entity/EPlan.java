@@ -1,5 +1,6 @@
 package com.cyad.posgrado.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -18,7 +19,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 @Table(name="CAT_PLAN")
 @Entity
-public class EPlan {
+public class EPlan implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	@Column(name="ID")
@@ -102,6 +108,10 @@ public class EPlan {
 
 	public void setActivo(boolean activo) {
 		this.activo = activo;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 	

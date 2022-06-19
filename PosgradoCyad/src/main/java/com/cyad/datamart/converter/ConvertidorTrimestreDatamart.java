@@ -6,9 +6,11 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.cyad.datamart.entity.ETrayectoriaDatamart;
+import com.cyad.datamart.entity.ETrimestreDatamart;
 import com.cyad.datamart.model.MTrayectoriaDatamart;
+import com.cyad.datamart.model.MTrimestreDatamart;
 /**
- * clase componente para conversion de entidad  ETrayectoriaDatamart a modelo MTrayectoriaDatamart
+ * clase componente para conversion de entidad  ETrimestreDatamart a modelo MTrimestreDatamart
  * @author Salvador Solis Atenco
  *
  */
@@ -19,11 +21,11 @@ public class ConvertidorTrimestreDatamart {
 	 * @param lista de entidades ETrayectoriaDatamart
 	 * @return lista de objetos MTrayectoriaDatamart
 	 */
-	public List<MTrayectoriaDatamart> convertirLista(List<ETrayectoriaDatamart> e_trayectorias){
-		List<MTrayectoriaDatamart> m_trayectorias = new ArrayList<MTrayectoriaDatamart>();
-		for(ETrayectoriaDatamart trayectoria : e_trayectorias)
-			m_trayectorias.add(new MTrayectoriaDatamart(trayectoria));
+	public List<MTrimestreDatamart> convertirLista(List<ETrimestreDatamart> e_trimestres){
+		List<MTrimestreDatamart> m_trimestres = new ArrayList<MTrimestreDatamart>();
+		for(ETrimestreDatamart trimestre : e_trimestres)
+			m_trimestres.add(new MTrimestreDatamart(trimestre));
 		
-		return m_trayectorias;
+		return m_trimestres;
 	}
 }

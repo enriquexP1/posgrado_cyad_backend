@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cyad.datamart.entity.EDatosPorTrimestreDatamart;
 import com.cyad.datamart.model.MDatosPorTrimestreDatamart;
 /**
- * clase componente para conversion de entidad  EGrupoProtocoloDatamart a modelo MGrupoProtocoloDatamart
+ * clase componente para conversion de entidad  EDatosPorTrimestreDatamart a modelo MDatosPorTrimestreDatamart
  * @author Salvador Solis Atenco
  *
  */

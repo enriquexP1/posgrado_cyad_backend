@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 import com.cyad.producciones.entity.EProduccion;
 import com.cyad.producciones.model.MProduccion;
 /**
- * Esta clase realiza una conversion de una entidad a un objeto
+ * Esta clase realiza una conversion de una entidad EProduccion a un objeto MProduccion
  * @author Salvador Solis Atenco
  *
  */
 @Component("convertidor_producciones")
 public class ConvertidorProduccion {
 	/**
-	 * metodo que convierte una lista de entidades en objetos
+	 * metodo que convierte una lista de entidades EProduccion en objetos MProduccion
 	 * @param lista de entidades EProduccion
 	 * @return lista de objetos MProduccion
 	 */

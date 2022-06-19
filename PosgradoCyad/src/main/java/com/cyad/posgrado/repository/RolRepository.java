@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cyad.posgrado.entity.ERol;
 /**
- * clase que hace uso de JpaRepository para realizar las operaciones CRUD a la base de datos
+ * Clase que hace uso de JpaRepository para proporcionar soporte de repositorio y las consultas hacia la base datos de la información el rol que tiene un participante dentro del grupo de protocolo.
  * @author Salvador Solis Atenco
  *
  */

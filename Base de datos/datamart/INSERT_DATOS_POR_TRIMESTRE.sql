@@ -6,7 +6,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_DATOS_POR_TRIMESTRE`(
     IN in_id_trimestre BIGINT
 )
 BEGIN
-	INSERT INTO db_cyad_posgrado_datamart.tb_datos_por_trimestre(estado, promedio, creditos, id_trayectoria, id_cat_trimestre)
+	INSERT INTO db_cyad_posgrado_datamart.tb_datos_por_trimestre(estado, promedio, creditos, id_trayectoria, id_trimestre)
     VALUES(
 		in_estado,
 		in_promedio,

@@ -24,6 +24,11 @@ import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * Esta clase representa a un aspirante de ingreso a uno de los posgrados de la divisiòn CyAD
+ * @author Salvador Solis Atenco
+ *
+ */
 @Table(name="ASPIRANTE")
 @Entity
 public class EAspirante implements Serializable{

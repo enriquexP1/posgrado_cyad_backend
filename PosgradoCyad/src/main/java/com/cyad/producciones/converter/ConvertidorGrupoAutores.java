@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cyad.producciones.entity.EGrupoAutores;
 import com.cyad.producciones.model.MGrupoAutores;
 /**
- * Esta clase realiza una conversion de una entidad a un objeto
+ * Esta clase realiza una conversion de una entidad EGrupoAutores a un objeto MGrupoAutores
  * @author Salvador Solis Atenco
  *
  */

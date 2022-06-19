@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cyad.posgrado.entity.EDepartamento;
 /**
- * clase que hace uso de JpaRepository para realizar las operaciones CRUD a la base de datos
+ * Clase que hace uso de JpaRepository para proporcionar soporte de repositorio y las consultas hacia la base de datos de la información del departamento al que pertenece un profesor.
  * @author Salvador Solis Atenco
  *
  */

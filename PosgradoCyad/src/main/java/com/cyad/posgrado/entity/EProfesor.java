@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 /**
- * clase entidad representa a los los profesores de los posgrados
+ * clase entidad representa a los profesores de los posgrados
  * @author Salvador Solis Atenco
  *
  */

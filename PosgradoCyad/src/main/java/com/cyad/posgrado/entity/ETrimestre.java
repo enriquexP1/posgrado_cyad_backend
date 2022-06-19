@@ -1,5 +1,6 @@
 package com.cyad.posgrado.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import javax.persistence.Table;
  */
 @Table(name="TRIMESTRES")
 @Entity
-public class ETrimestre {
+public class ETrimestre implements Serializable{
 	/**
 	 * 
 	 */

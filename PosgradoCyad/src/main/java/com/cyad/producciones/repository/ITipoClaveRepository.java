@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cyad.producciones.entity.ETipoClave;
 /**
- * clase que hace uso de JpaRepository para realizar las operaciones CRUD a la base de datos
+ * Clase que hace uso de JpaRepository para proporcionar soporte de repositorio y las consultas hacia la base datos de la información de los tipos de clave con los que puede contar un autor, dado que existen diferentes plataformas donde se publican los artículos.
  * @author Salvador Solis Atenco
  *
  */

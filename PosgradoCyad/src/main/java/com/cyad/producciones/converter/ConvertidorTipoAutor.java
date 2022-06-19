@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cyad.producciones.entity.ETipoAutor;
 import com.cyad.producciones.model.MTipoAutor;
 /**
- * Esta clase realiza una conversion de una entidad a un objeto
+ * Esta clase realiza una conversion de una entidad ETipoAutor a un objeto MTipoAutor
  * @author Salvador Solis Atenco
  *
  */

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * Esta clase representa los estados academicos de un alumno
+ * Esta clase representa los estados de ingreso de un aspirante
  * @author Salvador Solis Atenco
  *
  */

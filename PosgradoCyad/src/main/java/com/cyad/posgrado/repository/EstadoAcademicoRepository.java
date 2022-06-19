@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cyad.posgrado.entity.EEstadoAcademico;
 /**
- * clase que hace uso de JpaRepository para realizar las operaciones CRUD a la base de datos
+ * Clase que hace uso de JpaRepository para proporcionar soporte de repositorio y las consultas hacia la base datos de la información de los estados académicos que puede tener un alumno en el trimestre vigente.
  * @author Salvador Solis Atenco
  *
  */

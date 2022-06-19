@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cyad.producciones.entity.ETipoClave;
 import com.cyad.producciones.model.MTipoClave;
 /**
- * Esta clase realiza una conversion de una entidad a un objeto
+ * Esta clase realiza una conversion de una entidad ETipoClave a un objeto MTipoClave
  * @author Salvador Solis Atenco
  *
  */
