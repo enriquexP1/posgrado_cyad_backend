@@ -58,10 +58,11 @@ public class AlumnoService implements IAlumnoService{
 	@Override
 	public boolean borrar(long id) {
 		try {
-			logger.info("ALUMNO BORRADO");
 			EAlumno alum = repositorio.findById(id);
 			alum.setActivo(false);
+			repositorio.save(alum);
 			//repositorio.delete(alum);
+			logger.info("ALUMNO BORRADO");
 			return true;
 		}catch(Exception e){
 			logger.error("ERROR AL BORRAR ALUMNO " + e);

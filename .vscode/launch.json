@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PosgradoCyadApplication<PosgradoCyad>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cyad.PosgradoCyadApplication",
+            "projectName": "PosgradoCyad",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
