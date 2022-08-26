@@ -3,25 +3,28 @@ package com.cyad.posgrado.model;
 import java.sql.Date;
 
 import com.cyad.posgrado.entity.EDatosAcademicos;
+import com.cyad.posgrado.entity.EDedicacion;
+import com.cyad.posgrado.entity.ETelefono;
+import com.cyad.posgrado.entity.ETrimestre;
 /**
  * clase que representa el objeto java de la entidad EDatosAcademicos
- * @author Salvador Solis Atenco
+ * @author Salvador Solis Atenco y Enrique Ramírez Martínez 
  *
  */
 public class MDatosAcademicos {
 	private long id;
-	private String dedicacion;
+	private EDedicacion dedicacion;
 	private int creditosCubiertos;
 	private int creditosAcumulados;
-	private String trimestreIngreso;
-	private String trimestreEgreso;
-	private char ulimoTrimestreAa;
-	private char ulimoTrimestreRe;
+	private ETrimestre trimestreIngreso;
+	private ETrimestre trimestreEgreso;
+	private ETrimestre ulimoTrimestreAa;
+	private ETrimestre ulimoTrimestreRe;
 	private Date fecha_ingreso;
 	private Date fecha_egreso;
 	private float promedio;
 	private int numTrimestres;
-	private char  trimestreExamen;
+	private ETrimestre  trimestreExamen;
 	private int anioExamen;
 	private int anioIngreso;
 	private Date fechaExamen;
@@ -32,22 +35,22 @@ public class MDatosAcademicos {
 	private MPlan plan;
 	private MAreaConcentracion areac;
 	private MEstadoAcademico estado;
-	
+    private ETelefono telefono;
 
 	public MDatosAcademicos() {
 		super();
-		this.dedicacion = "";
+		this.dedicacion = null;
 		this.creditosCubiertos = 0;
 		this.creditosAcumulados = 0;
-		this.trimestreIngreso = "";
-		this.trimestreEgreso = "";
-		this.ulimoTrimestreAa = ' ';
-		this.ulimoTrimestreRe = ' ';
+		this.trimestreIngreso = null;
+		this.trimestreEgreso = null;
+		this.ulimoTrimestreAa = null;
+		this.ulimoTrimestreRe = null;
 		this.fecha_ingreso = null;
 		this.fecha_egreso = null;
 		this.promedio = 0;
 		this.numTrimestres = 0;
-		this.trimestreExamen = ' ';
+		this.trimestreExamen = null;
 		this.anioExamen = 0;
 		this.fechaExamen = null;
 		this.fechaTitulacion = null;
@@ -56,12 +59,13 @@ public class MDatosAcademicos {
 		this.plan = null;
 		this.areac = null;
 		this.estado = null;
+		this.telefono = null;
 	}
 	
 	
 	/**
 	 * constructor para la conversion de entidad a objeto
-	 * @param entidad datos academicos
+	 * @param entidad datos academicos 
 	 */
 	public MDatosAcademicos(EDatosAcademicos datos) {
 		super();
@@ -82,6 +86,7 @@ public class MDatosAcademicos {
 		this.fechaExamen = datos.getFechaExamen();
 		this.fechaTitulacion = datos.getFechaTitulacion();
 		this.fecha_disertacion = datos.getFecha_disertacion();
+		this.telefono = datos.getTelefono();
 		this.activo = datos.isActivo();
 		if(datos.getNivel() != null)
 			this.nivel = new MNivel (datos.getNivel());
@@ -107,13 +112,13 @@ public class MDatosAcademicos {
 
 
 
-	public String getDedicacion() {
+	public EDedicacion getDedicacion() {
 		return dedicacion;
 	}
 
 
 
-	public void setDedicacion(String dedicacion) {
+	public void setDedicacion(EDedicacion dedicacion) {
 		this.dedicacion = dedicacion;
 	}
 
@@ -143,49 +148,49 @@ public class MDatosAcademicos {
 
 
 
-	public String getTrimestreIngreso() {
+	public ETrimestre getTrimestreIngreso() {
 		return trimestreIngreso;
 	}
 
 
 
-	public void setTrimestreIngreso(String trimestreIngreso) {
+	public void setTrimestreIngreso(ETrimestre trimestreIngreso) {
 		this.trimestreIngreso = trimestreIngreso;
 	}
 
 
 
-	public String getTrimestreEgreso() {
+	public ETrimestre getTrimestreEgreso() {
 		return trimestreEgreso;
 	}
 
 
 
-	public void setTrimestreEgreso(String trimestreEgreso) {
+	public void setTrimestreEgreso(ETrimestre trimestreEgreso) {
 		this.trimestreEgreso = trimestreEgreso;
 	}
 
 
 
-	public char getUlimoTrimestreAa() {
+	public ETrimestre getUlimoTrimestreAa() {
 		return ulimoTrimestreAa;
 	}
 
 
 
-	public void setUlimoTrimestreAa(char ulimoTrimestreAa) {
+	public void setUlimoTrimestreAa(ETrimestre ulimoTrimestreAa) {
 		this.ulimoTrimestreAa = ulimoTrimestreAa;
 	}
 
 
 
-	public char getUlimoTrimestreRe() {
+	public ETrimestre getUlimoTrimestreRe() {
 		return ulimoTrimestreRe;
 	}
 
 
 
-	public void setUlimoTrimestreRe(char ulimoTrimestreRe) {
+	public void setUlimoTrimestreRe(ETrimestre ulimoTrimestreRe) {
 		this.ulimoTrimestreRe = ulimoTrimestreRe;
 	}
 
@@ -239,13 +244,13 @@ public class MDatosAcademicos {
 
 
 
-	public char getTrimestreExamen() {
+	public ETrimestre getTrimestreExamen() {
 		return trimestreExamen;
 	}
 
 
 
-	public void setTrimestreExamen(char trimestreExamen) {
+	public void setTrimestreExamen(ETrimestre trimestreExamen) {
 		this.trimestreExamen = trimestreExamen;
 	}
 
@@ -367,6 +372,16 @@ public class MDatosAcademicos {
 
 	public void setAnioIngreso(int anioIngreso) {
 		this.anioIngreso = anioIngreso;
+	}
+
+
+	public ETelefono getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(ETelefono telefono) {
+		this.telefono = telefono;
 	}
 
 	

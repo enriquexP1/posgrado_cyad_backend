@@ -94,7 +94,16 @@ public class EAlumno implements Serializable {
 	@OneToOne(mappedBy = "alumno")
 	@JsonIgnore
 	private EDatosAcademicos datos_academicos;
-
+	
+	@OneToOne(mappedBy ="alumno")
+	@JsonIgnore
+	private EAlumnoBeca alumnoBeca;
+	
+	
+	@OneToOne(mappedBy = "alumno")
+	@JsonIgnore
+	private EAlumno_Identificador_puente identificadorAlumno;
+	
 	public EAlumno() {
 		this.activo = true;
 	}
@@ -233,7 +242,11 @@ public class EAlumno implements Serializable {
 	public String getTelefono() {
 		return telefono;
 	}
-
+	
+	public boolean getActivo()
+	{
+		return activo;
+	}
 
 
 	public void setTelefono(String relefono) {

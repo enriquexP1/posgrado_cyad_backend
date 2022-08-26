@@ -30,8 +30,7 @@ public class EDatosAcademicos implements Serializable{
 	@Column(name="ID")
 	private long id;
 	
-	@Column(name="DEDICACION")
-	private String dedicacion;
+	
 	
 	@Column(name="CREDITOS_CUBIERTOS")
 	private int creditosCubiertos;
@@ -39,17 +38,39 @@ public class EDatosAcademicos implements Serializable{
 	@Column(name="CREDITOS_ACUMULADOS")
 	private int creditosAcumulados;
 	
-	@Column(name="TRIMESTRE_INGRESO")
-	private String trimestreIngreso;
 	
-	@Column(name="TRIMESTRE_EGRESO")
-	private String trimestreEgreso;
+	//Estos trimestres los tenemos que ligar a trimestre
+	@OneToOne
+	@JoinColumn(name="TRIMESTRE_INGRESO")
+	private ETrimestre trimestreIngreso;
 	
-	@Column(name="ULTIMO_TRIMESTRE_AA")
-	private char ulimoTrimestreAa;
+	@OneToOne
+	@JoinColumn(name="TRIMESTRE_EGRESO")
+	private ETrimestre trimestreEgreso;
 	
-	@Column(name="ULTIMO_TRIMESTRE_RE")
-	private char ulimoTrimestreRe;
+	@ManyToOne
+	@JoinColumn(name="ULTIMO_TRIMESTRE_AA")
+	private ETrimestre ulimoTrimestreAa;
+	@ManyToOne
+	@JoinColumn(name="ULTIMO_TRIMESTRE_RE")
+	private ETrimestre ulimoTrimestreRe;
+	
+	@OneToOne
+	@JoinColumn(name="TRIMESTRE_EXAMEN")
+	private ETrimestre  trimestreExamen;
+	
+	
+	//Dedicacion
+	@ManyToOne
+	@JoinColumn(name="DEDICACION")
+	private EDedicacion dedicacion;
+	//Telefono
+	@ManyToOne
+	@JoinColumn(name = "TELEFONO")
+	private ETelefono telefono;
+	
+	
+	
 	
 	@Column(name="FECHA_INGRESO")
 	private Date fecha_ingreso;
@@ -63,8 +84,7 @@ public class EDatosAcademicos implements Serializable{
 	@Column(name="NUMERO_TRIMESTRES")
 	private int numTrimestres;
 	
-	@Column(name="TRIMESTRE_EXAMEN")
-	private char  trimestreExamen;
+	
 	
 	@Column(name="ANIO_EXAMEN")
 	private int anioExamen;
@@ -129,11 +149,11 @@ public class EDatosAcademicos implements Serializable{
 		this.id = id;
 	}
 
-	public String getDedicacion() {
+	public EDedicacion getDedicacion() {
 		return dedicacion;
 	}
 
-	public void setDedicacion(String dedicacion) {
+	public void setDedicacion(EDedicacion dedicacion) {
 		this.dedicacion = dedicacion;
 	}
 
@@ -153,35 +173,35 @@ public class EDatosAcademicos implements Serializable{
 		this.creditosAcumulados = creditosAcumulados;
 	}
 
-	public String getTrimestreIngreso() {
+	public ETrimestre getTrimestreIngreso() {
 		return trimestreIngreso;
 	}
 
-	public void setTrimestreIngreso(String trimestreIngreso) {
+	public void setTrimestreIngreso(ETrimestre trimestreIngreso) {
 		this.trimestreIngreso = trimestreIngreso;
 	}
 
-	public String getTrimestreEgreso() {
+	public ETrimestre getTrimestreEgreso() {
 		return trimestreEgreso;
 	}
 
-	public void setTrimestreEgreso(String trimestreEgreso) {
+	public void setTrimestreEgreso(ETrimestre trimestreEgreso) {
 		this.trimestreEgreso = trimestreEgreso;
 	}
 
-	public char getUlimoTrimestreAa() {
+	public ETrimestre getUlimoTrimestreAa() {
 		return ulimoTrimestreAa;
 	}
 
-	public void setUlimoTrimestreAa(char ulimoTrimestreAa) {
+	public void setUlimoTrimestreAa(ETrimestre ulimoTrimestreAa) {
 		this.ulimoTrimestreAa = ulimoTrimestreAa;
 	}
 
-	public char getUlimoTrimestreRe() {
+	public ETrimestre getUlimoTrimestreRe() {
 		return ulimoTrimestreRe;
 	}
 
-	public void setUlimoTrimestreRe(char ulimoTrimestreRe) {
+	public void setUlimoTrimestreRe(ETrimestre ulimoTrimestreRe) {
 		this.ulimoTrimestreRe = ulimoTrimestreRe;
 	}
 
@@ -217,11 +237,11 @@ public class EDatosAcademicos implements Serializable{
 		this.numTrimestres = numTrimestres;
 	}
 
-	public char getTrimestreExamen() {
+	public ETrimestre getTrimestreExamen() {
 		return trimestreExamen;
 	}
 
-	public void setTrimestreExamen(char trimestreExamen) {
+	public void setTrimestreExamen(ETrimestre trimestreExamen) {
 		this.trimestreExamen = trimestreExamen;
 	}
 
@@ -315,6 +335,14 @@ public class EDatosAcademicos implements Serializable{
 
 	public void setAnioIngreso(int anioIngreso) {
 		this.anioIngreso = anioIngreso;
+	}
+
+	public ETelefono getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(ETelefono telefono) {
+		this.telefono = telefono;
 	}
 
 	

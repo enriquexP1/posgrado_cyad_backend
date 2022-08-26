@@ -9,7 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * clase entidad representa a los profesores de los posgrados
  * @author Salvador Solis Atenco
@@ -62,6 +65,11 @@ public class EProfesor implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="ID_AREA_INVESTIGACION")
 	private EAreaInvestigacion area_investigacion;
+	
+	@OneToOne(mappedBy = "profesor")
+	@JsonIgnore
+	private EProfesor_Identificador_puente identificadorProfesor;
+	
 	
 	public EProfesor() {
 		this.activo = true;

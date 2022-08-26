@@ -1,6 +1,10 @@
 package com.cyad.controller;
 
+
+
+
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.validation.annotation.Validated;
@@ -28,67 +32,88 @@ import com.cyad.aspirantes.service.EstadoAspiranteService;
 import com.cyad.datamart.service.AlumnoServiceDatamart;
 import com.cyad.posgrado.entity.EAdeudo;
 import com.cyad.posgrado.entity.EAlumno;
+import com.cyad.posgrado.entity.EAlumnoBeca;
+import com.cyad.posgrado.entity.EAlumno_Identificador_puente;
 import com.cyad.posgrado.entity.EAreaConcentracion;
 import com.cyad.posgrado.entity.EAreaInvestigacion;
+import com.cyad.posgrado.entity.EBecas;
 import com.cyad.posgrado.entity.ECorreo;
 import com.cyad.posgrado.entity.EDatosAcademicos;
 import com.cyad.posgrado.entity.EDatosIngreso;
+import com.cyad.posgrado.entity.EDedicacion;
 import com.cyad.posgrado.entity.EDepartamento;
 import com.cyad.posgrado.entity.EDireccion;
 import com.cyad.posgrado.entity.EDivision;
 import com.cyad.posgrado.entity.EEstadoAcademico;
 import com.cyad.posgrado.entity.EGrupoProtocolo;
+import com.cyad.posgrado.entity.EIdentificadores_Investigacion;
 import com.cyad.posgrado.entity.EInstitucion;
 import com.cyad.posgrado.entity.ENivel;
 import com.cyad.posgrado.entity.EParticipante;
 import com.cyad.posgrado.entity.EPlan;
 import com.cyad.posgrado.entity.EProfesor;
+import com.cyad.posgrado.entity.EProfesor_Identificador_puente;
 import com.cyad.posgrado.entity.EProyecto;
 import com.cyad.posgrado.entity.ERol;
+import com.cyad.posgrado.entity.ETelefono;
 import com.cyad.posgrado.entity.ETipoParticipante;
 import com.cyad.posgrado.entity.ETipoProyecto;
 import com.cyad.posgrado.entity.ETrimestre;
 import com.cyad.posgrado.model.MAdeudo;
 import com.cyad.posgrado.model.MAlumno;
+import com.cyad.posgrado.model.MAlumnoBeca;
+import com.cyad.posgrado.model.MAlumno_Identificador_puente;
 import com.cyad.posgrado.model.MAreaConcentracion;
 import com.cyad.posgrado.model.MAreaInvestigacion;
+import com.cyad.posgrado.model.MBecas;
 import com.cyad.posgrado.model.MCorreo;
 import com.cyad.posgrado.model.MDatosAcademicos;
 import com.cyad.posgrado.model.MDatosIngreso;
+import com.cyad.posgrado.model.MDedicacion;
 import com.cyad.posgrado.model.MDepartamento;
 import com.cyad.posgrado.model.MDireccion;
 import com.cyad.posgrado.model.MDivision;
 import com.cyad.posgrado.model.MEstadoAcademico;
 import com.cyad.posgrado.model.MGrupoProtocolo;
+import com.cyad.posgrado.model.MIdentificadores_Investigacion;
 import com.cyad.posgrado.model.MInstitucion;
 import com.cyad.posgrado.model.MNivel;
 import com.cyad.posgrado.model.MParticipante;
 import com.cyad.posgrado.model.MPlan;
 import com.cyad.posgrado.model.MProfesor;
+import com.cyad.posgrado.model.MProfesor_Identificador_puente;
 import com.cyad.posgrado.model.MProyecto;
 import com.cyad.posgrado.model.MRol;
+import com.cyad.posgrado.model.MTelefono;
 import com.cyad.posgrado.model.MTipoParticipante;
 import com.cyad.posgrado.model.MTipoProyecto;
 import com.cyad.posgrado.model.MTrimestre;
 import com.cyad.posgrado.service.AdeudoService;
+import com.cyad.posgrado.service.AlumnoBecaService;
+import com.cyad.posgrado.service.AlumnoIdentificadorService;
 import com.cyad.posgrado.service.AlumnoService;
 import com.cyad.posgrado.service.AreaConcentracionService;
 import com.cyad.posgrado.service.AreaInvestigacionService;
+import com.cyad.posgrado.service.BecasService;
 import com.cyad.posgrado.service.CorreoService;
 import com.cyad.posgrado.service.DatosAcademicosService;
 import com.cyad.posgrado.service.DatosIngresoService;
+import com.cyad.posgrado.service.DedicacionService;
 import com.cyad.posgrado.service.DepartamentoService;
 import com.cyad.posgrado.service.DireccionService;
 import com.cyad.posgrado.service.DivisionService;
 import com.cyad.posgrado.service.EstadoAcademicoService;
 import com.cyad.posgrado.service.GrupoProtocoloService;
+import com.cyad.posgrado.service.Identificadores_InvestigacionService;
 import com.cyad.posgrado.service.InstitucionService;
 import com.cyad.posgrado.service.NivelService;
 import com.cyad.posgrado.service.ParticipanteService;
 import com.cyad.posgrado.service.PlanService;
+import com.cyad.posgrado.service.ProfesorIdentificadorService;
 import com.cyad.posgrado.service.ProfesorService;
 import com.cyad.posgrado.service.ProyectoService;
 import com.cyad.posgrado.service.RolService;
+import com.cyad.posgrado.service.TelefonoService;
 import com.cyad.posgrado.service.TipoParticipanteService;
 import com.cyad.posgrado.service.TipoProyectoService;
 import com.cyad.posgrado.service.TrimestreService;
@@ -116,12 +141,22 @@ import com.cyad.producciones.service.TipoProduccionService;
 /**
  * Esta clase es el controlador principal REST almacena las rutas que se utilizan para atender las peticiones HTTP
  * @author Salvador Solis Atenco
+ * @author Enrique Ramírez Martínez 
  *
  */
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")// permisos CORS a la ruta por defecto de la apliccion de Angular
 @RequestMapping("/v1")
 public class ControlRest {
+	
+	@Autowired
+	@Qualifier("servicio_becas")
+	BecasService service_beca;
+	
+	@Autowired
+	@Qualifier("servicio_AlumnoBeca")
+	AlumnoBecaService service_alumnoBeca;
+	
 	@Autowired
 	@Qualifier("servicio_profesor")
 	ProfesorService service_prof;
@@ -249,7 +284,28 @@ public class ControlRest {
 	@Autowired
 	@Qualifier("servicio_trimestres")
 	TrimestreService servicio_trimestres;
-
+	
+	@Autowired
+	@Qualifier("servicio_dedicacion")
+	DedicacionService servicio_dedicacion;
+	
+	@Autowired
+	@Qualifier("servicio_telefono")
+	TelefonoService servicio_telefono;
+	
+	@Autowired
+	@Qualifier("servicio_identificadores_investigacion")
+	Identificadores_InvestigacionService servicio_identificadores;
+	
+	
+	@Autowired
+	@Qualifier("servicio_AlumnoIdentificador")
+	AlumnoIdentificadorService servicio_alumnoIdentificador;
+	
+	@Autowired
+	@Qualifier("servicio_profesorIdentificador")
+	ProfesorIdentificadorService servicio_profesorIdentificador;
+	
 	// ------Profesor
 	// obtener
 	@GetMapping("/profesores")
@@ -1308,4 +1364,229 @@ public class ControlRest {
 	}
 	
 	
+	
+	
+	//Servicio creado por Enrique como prueba
+	//-------------------------Becas--------------------
+		// obtener
+		@GetMapping("/becas")
+		public List<MBecas> obtenerBecas() {
+			return service_beca.obtener();
+		}
+
+		// obtener
+		@GetMapping("/beca/{id}")
+		public MBecas obtenerBecas(@PathVariable("id") long id) {
+			return service_beca.obtener(id);
+		}
+
+		// insertar
+		@PostMapping("/beca")
+		public boolean agregarBeca(@RequestBody @Validated EBecas beca) {
+			return service_beca.crear(beca);
+		}
+
+		// actualizar
+		@PutMapping("/becaUpdate")
+		public boolean actualizarBeca(@RequestBody @Validated EBecas beca) {
+			return service_beca.actualizar(beca);
+		}
+
+		// borrar
+		@DeleteMapping("/becaDelete")
+		public boolean borrarBeca(@RequestParam("id") long id) {
+			return service_beca.borrar(id);
+		}
+		
+		//-------------------Alumno Beca--------------------
+		// obtener
+				@GetMapping("/AlumnoBecas")
+				public List<MAlumnoBeca> obtenerBecasAsignadas() {
+					return service_alumnoBeca.obtener();
+				}
+
+				// obtener
+				@GetMapping("/Alumnobeca/{id}")
+				public MAlumnoBeca obtenerBecasAsignadas(@PathVariable("id") long id) {
+					return service_alumnoBeca.obtener(id);
+				}
+
+				// insertar
+				@PostMapping("/Alumnobeca")
+				public boolean agregarBecaAsignada(@RequestBody @Validated EAlumnoBeca beca) {
+					return service_alumnoBeca.crear(beca);
+				}
+
+				// actualizar
+				@PutMapping("/AlumnoBecaUpdate")
+				public boolean actualizarBecaAsignada(@RequestBody @Validated EAlumnoBeca beca) {
+					return service_alumnoBeca.actualizar(beca);
+				}
+
+				// borrar
+				@DeleteMapping("/AlumnoBecaDelete")
+				public boolean borrarBecaAsignada(@RequestParam("id") long id) {
+					return service_alumnoBeca.borrar(id);
+				}
+				
+				//Servicio creado por Enrique como prueba
+				//-------------------------Dedicacion--------------------
+					// obtener
+					@GetMapping("/dedicaciones")
+					public List<MDedicacion> obtenerDedicaciones() {
+						return servicio_dedicacion.obtener();
+					}
+
+					// obtener
+					@GetMapping("/dedicacion/{id}")
+					public MDedicacion obtenerDedicacion(@PathVariable("id") long id) {
+						return servicio_dedicacion.obtener(id);
+					}
+
+					// insertar
+					@PostMapping("/dedicacion")
+					public boolean agregarDedicacion(@RequestBody @Validated EDedicacion dedicacion) {
+						return servicio_dedicacion.crear(dedicacion);
+					}
+
+					// actualizar
+					@PutMapping("/dedicacionUpdate")
+					public boolean actualizarDedicacion(@RequestBody @Validated EDedicacion dedicacion) {
+						return servicio_dedicacion.actualizar(dedicacion);
+					}
+
+					// borrar
+					@DeleteMapping("/dedicacionDelete")
+					public boolean borrarDedicacion(@RequestParam("id") long id) {
+						return servicio_dedicacion.borrar(id);
+					}	
+					//Servicio creado por Enrique como prueba
+					//-------------------------Dedicacion--------------------
+						// obtener
+						@GetMapping("/telefonos")
+						public List<MTelefono> obtenerTelefonos() {
+							return servicio_telefono.obtener();
+						}
+
+						// obtener
+						@GetMapping("/telefono/{id}")
+						public MTelefono obtenerTelefono(@PathVariable("id") long id) {
+							return servicio_telefono.obtener(id);
+						}
+
+						// insertar
+						@PostMapping("/telefono")
+						public boolean agregarTelefono(@RequestBody @Validated ETelefono telefono) {
+							return servicio_telefono.crear(telefono);
+						}
+
+						// actualizar
+						@PutMapping("/telefonoUpdate")
+						public boolean actualizarTelefono(@RequestBody @Validated ETelefono telefono) {
+							return servicio_telefono.actualizar(telefono);
+						}
+
+						// borrar
+						@DeleteMapping("/telefonoDelete")
+						public boolean borrarTelefono(@RequestParam("id") long id) {
+							return servicio_telefono.borrar(id);
+						}	
+						
+						//Servicio creado por Enrique como prueba
+						//-------------------------Identificadores_Investigacion--------------------
+							// obtener
+							@GetMapping("/Identificadores_Investigacion")
+							public List<MIdentificadores_Investigacion> obtenerIdentificadores() {
+								return servicio_identificadores.obtener();
+							}
+
+							// obtener
+							@GetMapping("/identificador_investigacion/{id}")
+							public MIdentificadores_Investigacion obtenerIdentificador(@PathVariable("id") long id) {
+								return servicio_identificadores.obtener(id);
+							}
+
+							// insertar
+							@PostMapping("/identificador_investigacion")
+							public boolean agregarIdentificador(@RequestBody @Validated EIdentificadores_Investigacion identificador) {
+								return servicio_identificadores.crear(identificador);
+							}
+
+							// actualizar
+							@PutMapping("/identificador_investigacionUpdate")
+							public boolean actualizarIdentificador(@RequestBody @Validated EIdentificadores_Investigacion identificador) {
+								return servicio_identificadores.actualizar(identificador);
+							}
+
+							// borrar
+							@DeleteMapping("/identificador_investigacionDelete")
+							public boolean borrarIdentificador(@RequestParam("id") long id) {
+								return servicio_identificadores.borrar(id);
+							}	
+							
+							
+							
+							//Servicio creado por Enrique como prueba
+							//-------------------------Alumno_Identificadores_Investigacion--------------------
+								// obtener
+								@GetMapping("/AlumnoIdentificadores_Investigacion")
+								public List<MAlumno_Identificador_puente> obtenerIdentificadoresAlumno() {
+									return servicio_alumnoIdentificador.obtener();
+								}
+
+								// obtener
+								@GetMapping("/AlumnoIdentificador_investigacion/{id}")
+								public MAlumno_Identificador_puente obtenerIdentificadorAlumno(@PathVariable("id") long id) {
+									return servicio_alumnoIdentificador.obtener(id);
+								}
+
+								// insertar
+								@PostMapping("/Alumnoidentificador_investigacion")
+								public boolean agregarIdentificadorAlumno(@RequestBody @Validated EAlumno_Identificador_puente Alumnoidentificador) {
+									return servicio_alumnoIdentificador.crear(Alumnoidentificador);
+								}
+
+								// actualizar
+								@PutMapping("/Alumnoidentificador_investigacionUpdate")
+								public boolean actualizarTelefono(@RequestBody @Validated EAlumno_Identificador_puente Alumnoidentificador) {
+									return servicio_alumnoIdentificador.actualizar(Alumnoidentificador);
+								}
+
+								// borrar
+								@DeleteMapping("/Alumnoidentificador_investigacionDelete")
+								public boolean borrarIdentificadorAlumno(@RequestParam("id") long id) {
+									return servicio_alumnoIdentificador.borrar(id);
+								}	
+								//-------------------------Profesor_Identificadores_Investigacion--------------------
+								// obtener
+								@GetMapping("/ProfesorIdentificadores_Investigacion")
+								public List<MProfesor_Identificador_puente> obtenerIdentificadoresProfesor() {
+									return servicio_profesorIdentificador.obtener();
+								}
+
+								// obtener
+								@GetMapping("/ProfesorIdentificador_investigacion/{id}")
+								public MProfesor_Identificador_puente obtenerIdentificadorProfesor(@PathVariable("id") long id) {
+									return servicio_profesorIdentificador.obtener(id);
+								}
+
+								// insertar
+								@PostMapping("/Profesoridentificador_investigacion")
+								public boolean agregarIdentificadorProfesor(@RequestBody @Validated EProfesor_Identificador_puente Profesoridentificador) {
+									return servicio_profesorIdentificador.crear(Profesoridentificador);
+								}
+
+								// actualizar
+								@PutMapping("/Profesoridentificador_investigacionUpdate")
+								public boolean actualizarTelefono(@RequestBody @Validated EProfesor_Identificador_puente Profesoridentificador) {
+									return servicio_profesorIdentificador.actualizar(Profesoridentificador);
+								}
+
+								// borrar
+								@DeleteMapping("/Profesoridentificador_investigacionDelete")
+								public boolean borrarIdentificadorProfesor(@RequestParam("id") long id) {
+									return servicio_profesorIdentificador.borrar(id);
+								}	
 }
+
+	

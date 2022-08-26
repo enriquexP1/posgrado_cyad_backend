@@ -8,10 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * clase entidad representa a los periodos trimestrales
- * @author Salvador Solis Atenco
+ * @author Salvador Solis Atenco  y Enrique Ramírez Martínez 
  *
  */
 @Table(name="TRIMESTRES")
@@ -36,6 +39,29 @@ public class ETrimestre implements Serializable{
 	@Column(name="TRIMESTRE")
 	private String trimestre;
 
+	
+	@OneToOne(mappedBy = "trimestreIngreso")
+	@JsonIgnore
+	private EDatosAcademicos trimestreIngreso;
+	
+	@OneToOne(mappedBy = "trimestreEgreso")
+	@JsonIgnore
+	private EDatosAcademicos trimestreEgreso;
+	
+	@OneToOne(mappedBy = "ulimoTrimestreAa")
+	@JsonIgnore
+	private EDatosAcademicos ulimoTrimestreAa;
+	
+	@OneToOne(mappedBy = "ulimoTrimestreRe")
+	@JsonIgnore
+	private EDatosAcademicos ulimoTrimestreRe;
+	
+	@OneToOne(mappedBy = "trimestreExamen")
+	@JsonIgnore
+	private EDatosAcademicos  trimestreExamen;
+	
+	
+	
 	public ETrimestre() {
 		super();
 	}
