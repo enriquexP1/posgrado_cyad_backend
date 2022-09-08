@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -20,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * clase entidad representa a los alumnos de los posgrados
  * @author Salvador Solis Atenco
+ * @author Enrique Ramírez Martínez 
  *
  */
 @Table(name="ALUMNO")
@@ -68,8 +71,10 @@ public class EAlumno implements Serializable {
 	@Column(name="GENERO")
 	private char genero;
 	
-	@Column(name="TELEFONO")
-	private String telefono;
+	//Telefono
+	@ManyToOne
+	@JoinColumn(name = "TELEFONO")
+	private ETelefono telefono;
 	
 	@Column(name="NACIONALIDAD")
 	private String nacionalidad;
@@ -239,7 +244,7 @@ public class EAlumno implements Serializable {
 
 
 
-	public String getTelefono() {
+	public ETelefono getTelefono() {
 		return telefono;
 	}
 	
@@ -249,7 +254,7 @@ public class EAlumno implements Serializable {
 	}
 
 
-	public void setTelefono(String relefono) {
+	public void setTelefono(ETelefono relefono) {
 		this.telefono = relefono;
 	}
 

@@ -64,10 +64,7 @@ public class EDatosAcademicos implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="DEDICACION")
 	private EDedicacion dedicacion;
-	//Telefono
-	@ManyToOne
-	@JoinColumn(name = "TELEFONO")
-	private ETelefono telefono;
+	
 	
 	
 	
@@ -337,13 +334,6 @@ public class EDatosAcademicos implements Serializable{
 		this.anioIngreso = anioIngreso;
 	}
 
-	public ETelefono getTelefono() {
-		return telefono;
-	}
-
-	public void setTelefono(ETelefono telefono) {
-		this.telefono = telefono;
-	}
-
+	
 	
 }

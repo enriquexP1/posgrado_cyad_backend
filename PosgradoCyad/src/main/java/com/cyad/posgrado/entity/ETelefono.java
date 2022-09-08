@@ -34,7 +34,7 @@ public class ETelefono implements Serializable {
 	
 	@OneToOne(mappedBy = "telefono")
 	@JsonIgnore
-	private EDatosAcademicos telefono;
+	private EAlumno telefono;
 	
 	
 	public ETelefono()

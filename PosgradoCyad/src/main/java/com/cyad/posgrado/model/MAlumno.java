@@ -6,6 +6,7 @@ import java.util.List;
 import com.cyad.posgrado.entity.EAlumno;
 import com.cyad.posgrado.entity.ECorreo;
 import com.cyad.posgrado.entity.EDireccion;
+import com.cyad.posgrado.entity.ETelefono;
 /**
  * clase que representa el objeto java de la entidad EAlumno
  * @author Salvador Solis Atenco
@@ -24,13 +25,13 @@ public class MAlumno {
 	private String fecha_nacimiento;
 	private int edad;
 	private char genero;	
-	private String telefono;
 	private String nacionalidad;
 	private boolean activo;
 	private List<MDireccion> direcciones;
 	private List<MCorreo> correos;
 	private MDatosIngreso datos_ingreso;
 	private MDatosAcademicos datos_academicos;
+	private ETelefono telefono;
 	
 	public MAlumno() {
 		super();
@@ -165,11 +166,11 @@ public class MAlumno {
 		this.genero = genero;
 	}
 
-	public String getTelefono() {
+	public ETelefono getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(String relefono) {
+	public void setTelefono(ETelefono relefono) {
 		this.telefono = relefono;
 	}
 

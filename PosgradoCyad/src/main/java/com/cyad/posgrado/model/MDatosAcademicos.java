@@ -4,7 +4,6 @@ import java.sql.Date;
 
 import com.cyad.posgrado.entity.EDatosAcademicos;
 import com.cyad.posgrado.entity.EDedicacion;
-import com.cyad.posgrado.entity.ETelefono;
 import com.cyad.posgrado.entity.ETrimestre;
 /**
  * clase que representa el objeto java de la entidad EDatosAcademicos
@@ -35,7 +34,7 @@ public class MDatosAcademicos {
 	private MPlan plan;
 	private MAreaConcentracion areac;
 	private MEstadoAcademico estado;
-    private ETelefono telefono;
+  
 
 	public MDatosAcademicos() {
 		super();
@@ -59,7 +58,7 @@ public class MDatosAcademicos {
 		this.plan = null;
 		this.areac = null;
 		this.estado = null;
-		this.telefono = null;
+		
 	}
 	
 	
@@ -86,7 +85,6 @@ public class MDatosAcademicos {
 		this.fechaExamen = datos.getFechaExamen();
 		this.fechaTitulacion = datos.getFechaTitulacion();
 		this.fecha_disertacion = datos.getFecha_disertacion();
-		this.telefono = datos.getTelefono();
 		this.activo = datos.isActivo();
 		if(datos.getNivel() != null)
 			this.nivel = new MNivel (datos.getNivel());
@@ -375,14 +373,6 @@ public class MDatosAcademicos {
 	}
 
 
-	public ETelefono getTelefono() {
-		return telefono;
-	}
-
-
-	public void setTelefono(ETelefono telefono) {
-		this.telefono = telefono;
-	}
-
+	
 	
 }
