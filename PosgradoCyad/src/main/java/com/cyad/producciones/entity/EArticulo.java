@@ -106,14 +106,7 @@ public class EArticulo implements Serializable {
 		return serialVersionUID;
 	}
 
-	public EArticuloPalabrasPuente getArticulo() {
-		return articulo;
-	}
-
-	public void setArticulo(EArticuloPalabrasPuente articulo) {
-		this.articulo = articulo;
-	}
-
+	
 	public ERevista getRevista() {
 		return revista;
 	}

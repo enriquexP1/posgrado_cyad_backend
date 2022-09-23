@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.cyad.posgrado.entity.ETelefono;
-import com.cyad.posgrado.model.MBecas;
 import com.cyad.posgrado.model.MTelefono;
 
 /**

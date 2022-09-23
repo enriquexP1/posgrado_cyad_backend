@@ -5,9 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.cyad.datamart.entity.ETrayectoriaDatamart;
 import com.cyad.datamart.entity.ETrimestreDatamart;
-import com.cyad.datamart.model.MTrayectoriaDatamart;
 import com.cyad.datamart.model.MTrimestreDatamart;
 /**
  * clase componente para conversion de entidad  ETrimestreDatamart a modelo MTrimestreDatamart

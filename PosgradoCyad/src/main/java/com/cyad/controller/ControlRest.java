@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.cyad.aspirantes.entity.EAdeudoAspirante;
 import com.cyad.aspirantes.entity.EAspirante;
@@ -116,46 +115,58 @@ import com.cyad.posgrado.service.TipoProyectoService;
 import com.cyad.posgrado.service.TrimestreService;
 import com.cyad.producciones.entity.EArticulo;
 import com.cyad.producciones.entity.EArticuloPalabrasPuente;
-import com.cyad.producciones.entity.EAutor;
-import com.cyad.producciones.entity.EGrupoAutores;
+import com.cyad.producciones.entity.EDesarrollo;
+import com.cyad.producciones.entity.EDocumentoReseñaPalabrasPuente;
+import com.cyad.producciones.entity.EDocumentoRespaldo;
+import com.cyad.producciones.entity.EDocumentos_Reseñas;
+import com.cyad.producciones.entity.EInnovacion;
 import com.cyad.producciones.entity.ELibro;
-import com.cyad.producciones.entity.EOrdenAutor;
+import com.cyad.producciones.entity.ELibroPalabrasPuente;
+import com.cyad.producciones.entity.EMemoria;
+import com.cyad.producciones.entity.EMemoriaPalabrasPuente;
 import com.cyad.producciones.entity.EOrigenReporte;
 import com.cyad.producciones.entity.EPalabrasClave;
-import com.cyad.producciones.entity.EProduccion;
 import com.cyad.producciones.entity.EReporte;
+import com.cyad.producciones.entity.EReportePalabrasPuente;
 import com.cyad.producciones.entity.ERevista;
-import com.cyad.producciones.entity.ETipoAutor;
-import com.cyad.producciones.entity.ETipoClave;
-import com.cyad.producciones.entity.ETipoProduccion;
+import com.cyad.producciones.entity.ERolParticipacion;
+import com.cyad.producciones.entity.ETipoDesarrollo;
 import com.cyad.producciones.model.MArticulo;
 import com.cyad.producciones.model.MArticuloPalabrasPuente;
-import com.cyad.producciones.model.MAutor;
-import com.cyad.producciones.model.MGrupoAutores;
+import com.cyad.producciones.model.MDesarrollo;
+import com.cyad.producciones.model.MDocumentoReseñaPalabrasPuente;
+import com.cyad.producciones.model.MDocumentoRespaldo;
+import com.cyad.producciones.model.MDocumentos_Reseñas;
+import com.cyad.producciones.model.MInnovacion;
 import com.cyad.producciones.model.MLibro;
-import com.cyad.producciones.model.MOrdenAutor;
+import com.cyad.producciones.model.MLibroPalabrasPuente;
+import com.cyad.producciones.model.MMemoria;
+import com.cyad.producciones.model.MMemoriaPalabrasPuente;
 import com.cyad.producciones.model.MOrigenReporte;
 import com.cyad.producciones.model.MPalabrasClave;
-import com.cyad.producciones.model.MProduccion;
 import com.cyad.producciones.model.MReporte;
+import com.cyad.producciones.model.MReportePalabrasPuente;
 import com.cyad.producciones.model.MRevista;
-import com.cyad.producciones.model.MTipoAutor;
-import com.cyad.producciones.model.MTipoClave;
-import com.cyad.producciones.model.MTipoProduccion;
+import com.cyad.producciones.model.MRolParticipacion;
+import com.cyad.producciones.model.MTipoDesarrollo;
 import com.cyad.producciones.service.ArticuloPalabrasPuenteService;
 import com.cyad.producciones.service.ArticuloService;
-import com.cyad.producciones.service.AutorService;
-import com.cyad.producciones.service.GrupoAutoresService;
+import com.cyad.producciones.service.DesarrolloService;
+import com.cyad.producciones.service.DocumentoReseñaPalabrasPuenteService;
+import com.cyad.producciones.service.DocumentoReseñaService;
+import com.cyad.producciones.service.DocumentoRespaldoService;
+import com.cyad.producciones.service.InnovacionService;
+import com.cyad.producciones.service.LibroPalabrasPuenteService;
 import com.cyad.producciones.service.LibroService;
-import com.cyad.producciones.service.OrdenAutorService;
+import com.cyad.producciones.service.MemoriaPalabrasPuenteService;
+import com.cyad.producciones.service.MemoriaService;
 import com.cyad.producciones.service.OrigenReporteService;
 import com.cyad.producciones.service.PalabrasClaveService;
-import com.cyad.producciones.service.ProduccionService;
+import com.cyad.producciones.service.ReportePalabrasPuenteService;
 import com.cyad.producciones.service.ReporteService;
 import com.cyad.producciones.service.RevistasService;
-import com.cyad.producciones.service.TipoAutorService;
-import com.cyad.producciones.service.TipoClaveService;
-import com.cyad.producciones.service.TipoProduccionService;
+import com.cyad.producciones.service.RolParticipacionService;
+import com.cyad.producciones.service.TipoDesarrolloService;
 
 /**
  * Esta clase es el controlador principal REST almacena las rutas que se
@@ -274,33 +285,7 @@ public class ControlRest {
 	@Qualifier("servicio_estado_aspirante")
 	EstadoAspiranteService servicio_estado_aspirante;
 
-	@Autowired
-	@Qualifier("servicio_produccion")
-	ProduccionService servicio_produccion;
-
-	@Autowired
-	@Qualifier("servicio_tipo_produccion")
-	TipoProduccionService servicio_tipo_produccion;
-
-	@Autowired
-	@Qualifier("servicio_grupo_autores")
-	GrupoAutoresService servicio_grupo_autores;
-
-	@Autowired
-	@Qualifier("servicio_orden_autor")
-	OrdenAutorService servicio_orden_autor;
-
-	@Autowired
-	@Qualifier("servicio_autor")
-	AutorService servicio_autor;
-
-	@Autowired
-	@Qualifier("servicio_tipo_autor")
-	TipoAutorService servicio_tipo_autor;
-
-	@Autowired
-	@Qualifier("servicio_tipo_clave")
-	TipoClaveService servicio_tipo_clave;
+	
 
 	@Autowired
 	@Qualifier("servicio_trimestres")
@@ -350,6 +335,50 @@ public class ControlRest {
 	@Autowired
 	@Qualifier("servicio_origen_reporte")
 	OrigenReporteService servicio_origen_reporte;
+
+	@Autowired
+	@Qualifier("servicio_memoria")
+	MemoriaService servicio_memoria;
+
+	@Autowired
+	@Qualifier("servicio_innovacion")
+	InnovacionService servicio_innovacion;
+
+	@Autowired
+	@Qualifier("servicio_documento_reseña")
+	DocumentoReseñaService servicio_documento_reseña;
+
+	@Autowired
+	@Qualifier("servicio_desarrollo")
+	DesarrolloService servicio_desarrollo;
+
+	@Autowired
+	@Qualifier("servicio_rol_participacion")
+	RolParticipacionService servicio_rol_participacion;
+
+	@Autowired
+	@Qualifier("servicio_tipo_desarrollo")
+	TipoDesarrolloService servicio_tipo_desarrollo;
+
+	@Autowired
+	@Qualifier("servicio_documento_respaldo")
+	DocumentoRespaldoService servicio_documento_respaldo;
+
+	@Autowired
+	@Qualifier("servicio_libro_palabras_puente")
+	LibroPalabrasPuenteService servicio_libro_palabras_puente;
+
+	@Autowired
+	@Qualifier("servicio_memoria_palabras_puente")
+	MemoriaPalabrasPuenteService servicio_memoria_palabras_puente;
+
+	@Autowired
+	@Qualifier("servicio_reporte_palabras_puente")
+	ReportePalabrasPuenteService servicio_reporte_palabras_puente;
+
+	@Autowired
+	@Qualifier("servicio_documento_reseña_palabras_puente")
+	DocumentoReseñaPalabrasPuenteService servicio_documentos_reseña_palabras_puente;
 
 	// termino de producciones
 
@@ -1134,241 +1163,6 @@ public class ControlRest {
 		return servicio_adeudo_aspirante.borrar(id);
 	}
 
-	// ------Producciones
-	// obtener
-	@GetMapping("/producciones")
-	public List<MProduccion> obtenerProducciones() {
-		return servicio_produccion.obtener();
-	}
-
-	// obtener
-	@GetMapping("/produccion/{id}")
-	public MProduccion obtenerProducciones(@PathVariable("id") long id) {
-		return servicio_produccion.obtener(id);
-	}
-
-	// obtener
-	@GetMapping("/produccion-download/{id}")
-	public boolean descargarDocumentoProbatorio(@PathVariable("id") long id) {
-		return servicio_produccion.descargar(id);
-	}
-
-	// insertar
-	@PostMapping("/produccion")
-	public MProduccion agregarProduccion(@RequestBody @Validated EProduccion produccion) {
-		return servicio_produccion.crear(produccion);
-	}
-
-	// insertar
-	@PostMapping("/produccion-upload")
-	public long agregarDocumentoProbatorio(@RequestParam("id") long id, @RequestParam("file") MultipartFile file) {
-		return servicio_produccion.cargarDocumento(id, file);
-	}
-
-	// actualizar
-	@PutMapping("/produccionUpdate")
-	public boolean actualizarProduccion(@RequestBody @Validated EProduccion produccion) {
-		return servicio_produccion.actualizar(produccion);
-	}
-
-	// borrar
-	@DeleteMapping("/produccion")
-	public boolean borrarProduccion(@RequestParam("id") long id) {
-		return servicio_produccion.borrar(id);
-	}
-
-	// ------Tipo Producciones
-
-	// obtener
-	@GetMapping("/tipoProducciones")
-	public List<MTipoProduccion> obtenerTipoProducciones() {
-		return servicio_tipo_produccion.obtener();
-	}
-
-	// obtener
-	@GetMapping("/tipoProduccion/{id}")
-	public MTipoProduccion obtenerTipoProducciones(@PathVariable("id") long id) {
-		return servicio_tipo_produccion.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/tipoProduccion")
-	public boolean agregarTipoProduccion(@RequestBody @Validated ETipoProduccion tipo_produccion) {
-		return servicio_tipo_produccion.crear(tipo_produccion);
-	}
-
-	// actualizar
-	@PutMapping("/tipoProduccionUpdate")
-	public boolean actualizarTipoProduccion(@RequestBody @Validated ETipoProduccion tipo_produccion) {
-		return servicio_tipo_produccion.actualizar(tipo_produccion);
-	}
-
-	// borrar
-	@DeleteMapping("/tipoProduccion")
-	public boolean borrarTipoProduccion(@RequestParam("id") long id) {
-		return servicio_tipo_produccion.borrar(id);
-	}
-
-	// ------Listas Autores
-
-	// obtener
-	@GetMapping("/allGruposAutores")
-	public List<MGrupoAutores> obtenerGrupoAutores() {
-		return servicio_grupo_autores.obtener();
-	}
-
-	// obtener
-	@GetMapping("/allGruposAutores/{id}")
-	public MGrupoAutores obtenerGrupoAutores(@PathVariable("id") long id) {
-		return servicio_grupo_autores.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/grupoAutores")
-	public boolean agregarGrupoAutores(@RequestBody @Validated EGrupoAutores autores) {
-		return servicio_grupo_autores.crear(autores);
-	}
-
-	// actualizar
-	@PutMapping("/grupoAutoresUpdate")
-	public boolean actualizarGrupoAutores(@RequestBody @Validated EGrupoAutores autores) {
-		return servicio_grupo_autores.actualizar(autores);
-	}
-
-	// borrar
-	@DeleteMapping("/grupoAutores")
-	public boolean borrarGrupoAutores(@RequestParam("id") long id) {
-		return servicio_grupo_autores.borrar(id);
-	}
-
-	// ------Orden Autor
-
-	// obtener
-	@GetMapping("/ordenAutores")
-	public List<MOrdenAutor> obtenerOrdenAutor() {
-		return servicio_orden_autor.obtener();
-	}
-
-	// obtener
-	@GetMapping("/ordenAutor/{id}")
-	public MOrdenAutor obtenerOrdenAutor(@PathVariable("id") long id) {
-		return servicio_orden_autor.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/ordenAutor")
-	public boolean agregarOrdenAutor(@RequestBody @Validated EOrdenAutor orden) {
-		return servicio_orden_autor.crear(orden);
-	}
-
-	// actualizar
-	@PutMapping("/ordenAutorUpdate")
-	public boolean actualizarOrdenAutor(@RequestBody @Validated EOrdenAutor orden) {
-		return servicio_orden_autor.actualizar(orden);
-	}
-
-	// borrar
-	@DeleteMapping("/ordenAutor")
-	public boolean borrarOrdenAutor(@RequestParam("id") long id) {
-		return servicio_orden_autor.borrar(id);
-	}
-
-	// ------Autor
-
-	// obtener
-	@GetMapping("/autores")
-	public List<MAutor> obtenerAllAutores() {
-		return servicio_autor.obtener();
-	}
-
-	// obtener
-	@GetMapping("/autor/{id}")
-	public MAutor obtenerDetallesAutor(@PathVariable("id") long id) {
-		return servicio_autor.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/autor")
-	public boolean agregarAutor(@RequestBody @Validated EAutor autor) {
-		return servicio_autor.crear(autor);
-	}
-
-	// actualizar
-	@PutMapping("/autorUpdate")
-	public boolean actualizarAutor(@RequestBody @Validated EAutor autor) {
-		return servicio_autor.actualizar(autor);
-	}
-
-	// borrar
-	@DeleteMapping("/autor")
-	public boolean borrarAutor(@RequestParam("id") long id) {
-		return servicio_autor.borrar(id);
-	}
-
-	// ------Tipo Autor
-
-	// obtener
-	@GetMapping("/tipoAutores")
-	public List<MTipoAutor> obtenerTiposTipoAutor() {
-		return servicio_tipo_autor.obtener();
-	}
-
-	// obtener
-	@GetMapping("/tipoAutores/{id}")
-	public MTipoAutor obtenerTiposTipoAutor(@PathVariable("id") long id) {
-		return servicio_tipo_autor.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/tipoAutor")
-	public boolean agregarTipoAutor(@RequestBody @Validated ETipoAutor tipo_autor) {
-		return servicio_tipo_autor.crear(tipo_autor);
-	}
-
-	// actualizar
-	@PutMapping("/tipoAutorUpdate")
-	public boolean actualizarTipoAutor(@RequestBody @Validated ETipoAutor tipo_autor) {
-		return servicio_tipo_autor.actualizar(tipo_autor);
-	}
-
-	// borrar
-	@DeleteMapping("/tipoAutor")
-	public boolean borrarTipoAutor(@RequestParam("id") long id) {
-		return servicio_tipo_autor.borrar(id);
-	}
-
-	// ------Tipo Clave Autor
-
-	// obtener
-	@GetMapping("/tipoClaveAutores")
-	public List<MTipoClave> obtenerTiposClaveAutor() {
-		return servicio_tipo_clave.obtener();
-	}
-
-	// obtener
-	@GetMapping("/tipoClaveAutores/{id}")
-	public MTipoClave obtenerTiposClaveAutor(@PathVariable("id") long id) {
-		return servicio_tipo_clave.obtener(id);
-	}
-
-	// insertar
-	@PostMapping("/tipoClaveAutor")
-	public boolean agregarTipoClaveAutor(@RequestBody @Validated ETipoClave tipo_clave) {
-		return servicio_tipo_clave.crear(tipo_clave);
-	}
-
-	// actualizar
-	@PutMapping("/tipoClaveAutorUpdate")
-	public boolean actualizarTipoClaveAutor(@RequestBody @Validated ETipoClave tipo_clave) {
-		return servicio_tipo_clave.actualizar(tipo_clave);
-	}
-
-	// borrar
-	@DeleteMapping("/tipoClaveAutor")
-	public boolean borrarTipoClaveAutor(@RequestParam("id") long id) {
-		return servicio_tipo_clave.borrar(id);
-	}
-
 	// ------Trimestress
 
 	// obtener
@@ -1461,13 +1255,13 @@ public class ControlRest {
 	}
 
 	// obtener
-	@GetMapping("/Alumnobeca/{id}")
+	@GetMapping("/AlumnoBeca/{id}")
 	public MAlumnoBeca obtenerBecasAsignadas(@PathVariable("id") long id) {
 		return service_alumnoBeca.obtener(id);
 	}
 
 	// insertar
-	@PostMapping("/Alumnobeca")
+	@PostMapping("/AlumnoBeca")
 	public boolean agregarBecaAsignada(@RequestBody @Validated EAlumnoBeca beca) {
 		return service_alumnoBeca.crear(beca);
 	}
@@ -1517,7 +1311,7 @@ public class ControlRest {
 	}
 
 	// Servicio creado por Enrique como prueba
-	// -------------------------Dedicacion--------------------
+	// -------------------------Telefono--------------------
 	// obtener
 	@GetMapping("/telefonos")
 	public List<MTelefono> obtenerTelefonos() {
@@ -1743,7 +1537,7 @@ public class ControlRest {
 		return servicio_palabras_clave.borrar(id);
 	}
 
-	// -------------------------Articulos--------------------
+	// -------------------------Articulos palabras puente--------------------
 	// obtener
 	@GetMapping("/ArticulosPalabrasPuente")
 	public List<MArticuloPalabrasPuente> obtenerArticulosPalabrasPuente() {
@@ -1902,5 +1696,362 @@ public class ControlRest {
 	@DeleteMapping("/Institucion2Delete")
 	public boolean borrarInstitucion2(@RequestParam("id") long id) {
 		return servicio_institucion.borrar(id);
+	}
+
+	// -------------------------MEMORIAS--------------------
+	// obtener
+	@GetMapping("/Memorias")
+	public List<MMemoria> obtenerMemorias() {
+		return servicio_memoria.obtener();
+	}
+
+	// obtener
+	@GetMapping("/Memoria/{id}")
+	public MMemoria obtenerMemoria(@PathVariable("id") long id) {
+		return servicio_memoria.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/Memoria")
+	public boolean agregarMemoria(@RequestBody @Validated EMemoria memoria) {
+		return servicio_memoria.crear(memoria);
+	}
+
+	// actualizar
+	@PutMapping("/MemoriaUpdate")
+	public boolean actualizarMemoria(@RequestBody @Validated EMemoria memoria) {
+		return servicio_memoria.actualizar(memoria);
+
+	}
+
+	// borrar
+	@DeleteMapping("/MemoriaDelete")
+	public boolean borrarMemoria(@RequestParam("id") long id) {
+		return servicio_memoria.borrar(id);
+	}
+
+	// -------------------------INNOVACIONESS--------------------
+	// obtener
+	@GetMapping("/Innovaciones")
+	public List<MInnovacion> obtenerInnovaciones() {
+		return servicio_innovacion.obtener();
+	}
+
+	// obtener
+	@GetMapping("/Innovacion/{id}")
+	public MInnovacion obtenerInnovacion(@PathVariable("id") long id) {
+		return servicio_innovacion.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/Innovacion")
+	public boolean agregarInnovacion(@RequestBody @Validated EInnovacion innovacion) {
+		return servicio_innovacion.crear(innovacion);
+	}
+
+	// actualizar
+	@PutMapping("/InnovacionUpdate")
+	public boolean actualizarInnovacion(@RequestBody @Validated EInnovacion innovacion) {
+		return servicio_innovacion.actualizar(innovacion);
+
+	}
+
+	// borrar
+	@DeleteMapping("/InnovacionDelete")
+	public boolean borrarInnovacion(@RequestParam("id") long id) {
+		return servicio_innovacion.borrar(id);
+	}
+
+	// -------------------------DOCUMENTOS/RESEÑAS--------------------
+	// obtener
+	@GetMapping("/DocumentosReseñas")
+	public List<MDocumentos_Reseñas> obtenerDocumentosReseñas() {
+		return servicio_documento_reseña.obtener();
+	}
+
+	// obtener
+	@GetMapping("/DocumentoResena/{id}")
+	public MDocumentos_Reseñas obtenerDocumentoReseña(@PathVariable("id") long id) {
+		return servicio_documento_reseña.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/DocumentoResena")
+	public boolean agregarDocumentoReseña(@RequestBody @Validated EDocumentos_Reseñas doc) {
+		return servicio_documento_reseña.crear(doc);
+
+	}
+
+	// actualizar
+	@PutMapping("/DocumentoResenaUpdate")
+	public boolean actualizarDocumentoReseña(@RequestBody @Validated EDocumentos_Reseñas doc) {
+		return servicio_documento_reseña.actualizar(doc);
+
+	}
+
+	// borrar
+	@DeleteMapping("/DocumentoResenaDelete")
+	public boolean borrarDocumentoReseña(@RequestParam("id") long id) {
+		return servicio_documento_reseña.borrar(id);
+	}
+
+	// -------------------------DESARROLLO TECNOLÓGICO--------------------
+	// obtener
+	@GetMapping("/Desarrollos")
+	public List<MDesarrollo> obtenerDesarrollos() {
+		return servicio_desarrollo.obtener();
+	}
+
+	// obtener
+	@GetMapping("/Desarrollo/{id}")
+	public MDesarrollo obtenerDesarrollo(@PathVariable("id") long id) {
+		return servicio_desarrollo.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/Desarrollo")
+	public boolean agregarDesarrollo(@RequestBody @Validated EDesarrollo desarrollo) {
+		return servicio_desarrollo.crear(desarrollo);
+
+	}
+
+	// actualizar
+	@PutMapping("/DesarrolloUpdate")
+	public boolean actualizarDesarrollo(@RequestBody @Validated EDesarrollo desarrollo) {
+		return servicio_desarrollo.actualizar(desarrollo);
+
+	}
+
+	// borrar
+	@DeleteMapping("/DesarrolloDelete")
+	public boolean borrarDesarrollo(@RequestParam("id") long id) {
+		return servicio_desarrollo.borrar(id);
+	}
+
+	// -------------------------TIPOS DE DESARROLLO TECNOLÓGICO-------------------
+	// obtener
+	@GetMapping("/TiposDesarrollo")
+	public List<MTipoDesarrollo> obtenerTipos() {
+		return servicio_tipo_desarrollo.obtener();
+	}
+
+	// obtener
+	@GetMapping("/TipoDesarrollo/{id}")
+	public MTipoDesarrollo obtenerTipoDesarrollo(@PathVariable("id") long id) {
+		return servicio_tipo_desarrollo.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/TipoDesarrollo")
+	public boolean agregarTipoDesarrollo(@RequestBody @Validated ETipoDesarrollo desarrollo) {
+		return servicio_tipo_desarrollo.crear(desarrollo);
+
+	}
+
+	// actualizar
+	@PutMapping("/TipoDesarrolloUpdate")
+	public boolean actualizarTipoDesarrollo(@RequestBody @Validated ETipoDesarrollo desarrollo) {
+		return servicio_tipo_desarrollo.actualizar(desarrollo);
+
+	}
+
+	// borrar
+	@DeleteMapping("/TipoDesarrolloDelete")
+	public boolean borrarTipoDesarrollo(@RequestParam("id") long id) {
+		return servicio_tipo_desarrollo.borrar(id);
+	}
+
+	// -------------------------ROL DE PARTICIPACION-------------------
+	// obtener
+	@GetMapping("/RolesParticipacion")
+	public List<MRolParticipacion> obtenerRoles() {
+		return servicio_rol_participacion.obtener();
+	}
+
+	// obtener
+	@GetMapping("/RolParticipacion/{id}")
+	public MRolParticipacion obtenerRolParticipacion(@PathVariable("id") long id) {
+		return servicio_rol_participacion.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/RolParticipacion")
+	public boolean agregarTipoDesarrollo(@RequestBody @Validated ERolParticipacion rol) {
+		return servicio_rol_participacion.crear(rol);
+
+	}
+
+	// actualizar
+	@PutMapping("/RolParticipacionUpdate")
+	public boolean actualizarRolParticipacion(@RequestBody @Validated ERolParticipacion rol) {
+		return servicio_rol_participacion.actualizar(rol);
+
+	}
+
+	// borrar
+	@DeleteMapping("/RolParticipacionDelete")
+	public boolean borrarRolParticipacion(@RequestParam("id") long id) {
+		return servicio_rol_participacion.borrar(id);
+	}
+
+	// -------------------------DOCUMENTOS DE RESPALDO-------------------
+	// obtener
+	@GetMapping("/DocumentosRespaldo")
+	public List<MDocumentoRespaldo> obtenerDocumentosRespaldo() {
+		return servicio_documento_respaldo.obtener();
+	}
+
+	// obtener
+	@GetMapping("/DocumentoRespaldo/{id}")
+	public MDocumentoRespaldo obtenerDocumentoRespaldo(@PathVariable("id") long id) {
+		return servicio_documento_respaldo.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/DocumentoRespaldo")
+	public boolean agregarDocumentoRespaldo(@RequestBody @Validated EDocumentoRespaldo doc) {
+		return servicio_documento_respaldo.crear(doc);
+
+	}
+
+	// actualizar
+	@PutMapping("/DocumentoRespaldoUpdate")
+	public boolean actualizarDocumentoRespaldo(@RequestBody @Validated EDocumentoRespaldo doc) {
+		return servicio_documento_respaldo.actualizar(doc);
+
+	}
+
+	// borrar
+	@DeleteMapping("/DocumentoRespaldoDelete")
+	public boolean borrarDocumentoRespaldo(@RequestParam("id") long id) {
+		return servicio_documento_respaldo.borrar(id);
+	}
+
+	// -------------------------Libros palabras puente--------------------
+	// obtener
+	@GetMapping("/LibrosPalabrasPuente")
+	public List<MLibroPalabrasPuente> obtenerLibrosPalabrasPuente() {
+		return servicio_libro_palabras_puente.obtener();
+	}
+
+	// obtener
+	@GetMapping("/LibroPalabraPuente/{id}")
+	public MLibroPalabrasPuente obtenerLibroPalabrapuente(@PathVariable("id") long id) {
+		return servicio_libro_palabras_puente.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/LibroPalabraPuente")
+	public boolean agregarLibroPalabrapuente(@RequestBody @Validated ELibroPalabrasPuente puente) {
+		return servicio_libro_palabras_puente.crear(puente);
+	}
+
+	// actualizar
+	@PutMapping("/LibroPalabraclaveUpdate")
+	public boolean actualizarLibro(@RequestBody @Validated ELibroPalabrasPuente puente) {
+		return servicio_libro_palabras_puente.actualizar(puente);
+
+	}
+
+	// borrar
+	@DeleteMapping("/LibroPalabraPuenteDelete")
+	public boolean borrarLibroPalabraPuente(@RequestParam("id") long id) {
+		return servicio_libro_palabras_puente.borrar(id);
+	}
+
+	// -------------------------Memorias palabras puente--------------------
+	// obtener
+	@GetMapping("/MemoriasPalabrasPuente")
+	public List<MMemoriaPalabrasPuente> obtenerMemoriasPalabrasPuente() {
+		return servicio_memoria_palabras_puente.obtener();
+	}
+
+	// obtener
+	@GetMapping("/MemoriaPalabraPuente/{id}")
+	public MMemoriaPalabrasPuente obtenerMemoriaPalabrapuente(@PathVariable("id") long id) {
+		return servicio_memoria_palabras_puente.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/MemoriaPalabraPuente")
+	public boolean agregarMemoriaPalabrapuente(@RequestBody @Validated EMemoriaPalabrasPuente puente) {
+		return servicio_memoria_palabras_puente.crear(puente);
+	}
+
+	// actualizar
+	@PutMapping("/MemoriaPalabraclaveUpdate")
+	public boolean actualizarMemoria(@RequestBody @Validated EMemoriaPalabrasPuente puente) {
+		return servicio_memoria_palabras_puente.actualizar(puente);
+
+	}
+
+	// borrar
+	@DeleteMapping("/MemoriaPalabraPuenteDelete")
+	public boolean borrarMemoriaPalabraPuente(@RequestParam("id") long id) {
+		return servicio_memoria_palabras_puente.borrar(id);
+	}
+
+	// -------------------------Reportes palabras puente--------------------
+	// obtener
+	@GetMapping("/ReportesPalabrasPuente")
+	public List<MReportePalabrasPuente> obtenerReportesPalabrasPuente() {
+		return servicio_reporte_palabras_puente.obtener();
+	}
+
+	// obtener
+	@GetMapping("/ReportePalabraPuente/{id}")
+	public MReportePalabrasPuente obtenerReportePalabrapuente(@PathVariable("id") long id) {
+		return servicio_reporte_palabras_puente.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/ReportePalabraPuente")
+	public boolean agregarReportePalabrapuente(@RequestBody @Validated EReportePalabrasPuente puente) {
+		return servicio_reporte_palabras_puente.crear(puente);
+	}
+
+	// actualizar
+	@PutMapping("/ReportePalabraclaveUpdate")
+	public boolean actualizarReporte(@RequestBody @Validated EReportePalabrasPuente puente) {
+		return servicio_reporte_palabras_puente.actualizar(puente);
+
+	}
+
+	// borrar
+	@DeleteMapping("/ReportePalabraPuenteDelete")
+	public boolean borrarReportePalabraPuente(@RequestParam("id") long id) {
+		return servicio_reporte_palabras_puente.borrar(id);
+	}
+
+	// -------------------------DocumentoReseña palabras puente--------------------
+	// obtener
+	@GetMapping("/DocumentosReseñasPalabrasPuente")
+	public List<MDocumentoReseñaPalabrasPuente> obtenerDocumentoReseñasPalabrasPuente() {
+		return servicio_documentos_reseña_palabras_puente.obtener();
+	}
+
+	// obtener
+	@GetMapping("/DocumentoReseñaPalabraPuente/{id}")
+	public MDocumentoReseñaPalabrasPuente obtenerDocumentoReseñaPalabrapuente(@PathVariable("id") long id) {
+		return servicio_documentos_reseña_palabras_puente.obtener(id);
+	}
+
+	// insertar
+	@PostMapping("/DocumentoReseñaPalabraPuente")
+	public boolean agregarDocumentoReseñaPalabrapuente(@RequestBody @Validated EDocumentoReseñaPalabrasPuente puente) {
+		return servicio_documentos_reseña_palabras_puente.crear(puente);
+	}
+
+	// actualizar
+	@PutMapping("/DocumentoReseñaPalabraclaveUpdate")
+	public boolean actualizarDocumentoReseña(@RequestBody @Validated EDocumentoReseñaPalabrasPuente puente) {
+		return servicio_documentos_reseña_palabras_puente.actualizar(puente);
+
+	}
+
+	// borrar
+	@DeleteMapping("/DocumentoReseñaPalabraPuenteDelete")
+	public boolean borrarDocumentoReseñaPalabraPuente(@RequestParam("id") long id) {
+		return servicio_documentos_reseña_palabras_puente.borrar(id);
 	}
 }

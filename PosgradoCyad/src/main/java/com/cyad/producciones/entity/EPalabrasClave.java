@@ -28,10 +28,28 @@ public class EPalabrasClave implements Serializable {
 	@Column(name = "PALABRA")
 	private String palabra;
 
-	@OneToOne(mappedBy = "palabra")
+	@OneToOne(mappedBy = "palabraArticulo")
 	@JsonIgnore
 	private EArticuloPalabrasPuente palabraClave;
-
+	
+	@OneToOne(mappedBy = "palabraLibro")
+	@JsonIgnore
+	private ELibroPalabrasPuente palabraClave2;
+	
+	@OneToOne(mappedBy = "palabraMemoria")
+	@JsonIgnore
+	private EMemoriaPalabrasPuente palabraClave3;
+	
+	
+	@OneToOne(mappedBy = "palabraReporte")
+	@JsonIgnore
+	private EReportePalabrasPuente palabraClave4;
+	
+	@OneToOne(mappedBy = "palabraDocumentoReseña")
+	@JsonIgnore
+	private EDocumentoReseñaPalabrasPuente palabraClave5;
+	
+	
 	public EPalabrasClave() {
 
 	}
@@ -56,12 +74,6 @@ public class EPalabrasClave implements Serializable {
 		return serialVersionUID;
 	}
 
-	public EArticuloPalabrasPuente getPalabraClave() {
-		return palabraClave;
-	}
 
-	public void setPalabraClave(EArticuloPalabrasPuente palabraClave) {
-		this.palabraClave = palabraClave;
-	}
 
 }

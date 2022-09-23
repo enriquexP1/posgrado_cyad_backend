@@ -5,7 +5,6 @@ import java.io.Serializable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cyad.posgrado.entity.EAlumno_Identificador_puente;
 import com.cyad.posgrado.entity.EProfesor_Identificador_puente;
 
 @Repository("repositorio_ProfesorIdentificador")

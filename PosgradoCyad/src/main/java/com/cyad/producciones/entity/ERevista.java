@@ -77,12 +77,6 @@ public class ERevista implements Serializable{
 		return serialVersionUID;
 	}
 
-	public EArticulo getArticulo() {
-		return articulo;
-	}
-
-	public void setArticulo(EArticulo articulo) {
-		this.articulo = articulo;
-	}
+	
     
 }

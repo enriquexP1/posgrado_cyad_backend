@@ -1,6 +1,6 @@
 package com.cyad.producciones.model;
 
-import com.cyad.producciones.entity.EArticuloPalabrasPuente;
+
 import com.cyad.producciones.entity.EArticulo;
 import com.cyad.producciones.entity.ERevista;
 
@@ -12,7 +12,7 @@ public class MArticulo {
 	private int pagina_inicio;
 	private int pagina_fin;
 
-	private EArticuloPalabrasPuente articulopuente;
+	
 
 	private ERevista revista;
 
@@ -23,7 +23,7 @@ public class MArticulo {
 		this.año_publicacion = articulo.getAño_publicacion();
 		this.pagina_inicio = articulo.getPagina_inicio();
 		this.pagina_fin = articulo.getPagina_fin();
-		this.articulopuente = articulo.getArticulo();
+		
 		this.revista = articulo.getRevista();
 	}
 
@@ -75,13 +75,7 @@ public class MArticulo {
 		this.pagina_fin = pagina_fin;
 	}
 
-	public EArticuloPalabrasPuente getArticulopuente() {
-		return articulopuente;
-	}
-
-	public void setArticulopuente(EArticuloPalabrasPuente articulopuente) {
-		this.articulopuente = articulopuente;
-	}
+	
 
 	public ERevista getRevista() {
 		return revista;

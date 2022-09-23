@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.cyad.posgrado.entity.EIdentificadores_Investigacion;
-import com.cyad.posgrado.entity.ETelefono;
 
 @Repository("repositorio_identificadores_investigacion")
 public interface Identificadores_InvesitgacionRepository extends JpaRepository<EIdentificadores_Investigacion, Serializable> {

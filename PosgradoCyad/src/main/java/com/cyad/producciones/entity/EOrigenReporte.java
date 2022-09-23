@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * clase entidad representa la entidad Origen reporte
  * 
@@ -27,7 +29,9 @@ public class EOrigenReporte implements Serializable{
 	@Column(name="ORIGEN")
 	private String origen;
 	@OneToOne(mappedBy="origenReporte")
+	@JsonIgnore
 	private EReporte reporte;
+	
 	public EOrigenReporte()
 	{
 		super();

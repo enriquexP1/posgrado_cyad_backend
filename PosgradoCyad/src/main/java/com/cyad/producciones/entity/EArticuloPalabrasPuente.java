@@ -30,7 +30,7 @@ public class EArticuloPalabrasPuente  implements Serializable {
 	private EArticulo articulo;
 	@ManyToOne
 	@JoinColumn(name = "PALABRA_CLAVE")
-	private EPalabrasClave palabra;
+	private EPalabrasClave palabraArticulo;
 
 	public EArticuloPalabrasPuente()
 	{
@@ -54,11 +54,11 @@ public class EArticuloPalabrasPuente  implements Serializable {
 	}
 
 	public EPalabrasClave getPalabra() {
-		return palabra;
+		return palabraArticulo;
 	}
 
 	public void setPalabra(EPalabrasClave palabra) {
-		this.palabra = palabra;
+		this.palabraArticulo = palabra;
 	}
 
 	public static long getSerialversionuid() {

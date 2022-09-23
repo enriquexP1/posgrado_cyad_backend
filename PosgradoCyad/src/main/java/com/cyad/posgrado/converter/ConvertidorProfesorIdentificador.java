@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
-
-import com.cyad.posgrado.entity.EAlumnoBeca;
 import com.cyad.posgrado.entity.EProfesor_Identificador_puente;
-import com.cyad.posgrado.model.MAlumnoBeca;
 import com.cyad.posgrado.model.MProfesor_Identificador_puente;
 
 /**

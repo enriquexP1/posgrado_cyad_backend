@@ -1,7 +1,7 @@
 package com.cyad.producciones.model;
 
 
-import com.cyad.producciones.entity.EArticulo;
+
 import com.cyad.producciones.entity.ERevista;
 
 public class MRevista {
@@ -9,7 +9,7 @@ public class MRevista {
     private String nombre;
     private int numero;
     private String issn;
-	private EArticulo articulo;
+	
 	
 	public MRevista(ERevista revista)
 	{
@@ -17,7 +17,7 @@ public class MRevista {
 		this.nombre = revista.getNombre();
 		this.numero =  revista.getNumero();
 		this.issn =  revista.getIssn();
-		this.articulo = revista.getArticulo();
+		
 	}
 
 	public long getId() {
@@ -52,12 +52,6 @@ public class MRevista {
 		this.issn = issn;
 	}
 
-	public EArticulo getArticulo() {
-		return articulo;
-	}
-
-	public void setArticulo(EArticulo articulo) {
-		this.articulo = articulo;
-	}
+	
 	
 }
